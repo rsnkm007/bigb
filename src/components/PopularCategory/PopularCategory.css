@@ -1,0 +1,54 @@
+.main-content-sub .offer-details {
+  font-weight: bold;
+  font-size: 40px;
+  align-self: center;
+}
+
+.main-content-2 {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.main-content-2::-webkit-scrollbar {
+  display: none;
+}
+
+
+.categories-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.popular-categories img {
+  height: 180px;
+  width: 180px;
+  object-fit: fill;
+  border-radius: 250px;
+  cursor: pointer;
+}
+
+.popular-categories .category-name {
+  background-color: rgba(255, 0, 4, 1);
+  backdrop-filter: blur(3px);
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
