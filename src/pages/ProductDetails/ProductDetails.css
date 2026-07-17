@@ -257,3 +257,56 @@ body{
 }
 
 }
+
+
+.wishlist-btn{
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:#ff4d6d;
+
+    color:white;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.wishlist-btn:hover{
+
+    background:#ff1f4b;
+
+}
+
+.share-btn{
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:#2196f3;
+
+    color:white;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.share-btn:hover{
+
+    background:#1565c0;
+
+}

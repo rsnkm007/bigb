@@ -1,3 +1,8 @@
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { WishlistContext } from "../../context/WishlistContext";
+import { CartContext } from "../../context/CartContext";
+
 import { FaSearch } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
@@ -7,6 +12,8 @@ import { FaBars } from "react-icons/fa";
 import "./Header.css";
 
 function Header() {
+  const { wishlist } = useContext(WishlistContext);
+  const {totalItems} = useContext(CartContext);
   return (
     <>
       <header className="header">
@@ -27,18 +34,67 @@ function Header() {
         </div>
 
         <div className="header-right">
-          <div className='header-right-item'>
-            <FaUserCircle className='icons' />
+          <Link
+            to="/account"
+            className="header-right-item">
+            <FaUserCircle className="icons" />
+
             <div>Account</div>
-          </div>
-          <div className='header-right-item'>
-            <FaShoppingCart className='icons' />
+
+          </Link>
+          <Link
+            to="/cart"
+            className="header-right-item wishlist-link"
+          >
+
+            <div className="wishlist-icon-container">
+
+              <FaShoppingCart className="icons" />
+
+              {
+
+                totalItems > 0 &&
+
+                <span className="wishlist-count">
+
+                  {totalItems}
+
+                </span>
+
+              }
+
+            </div>
+
             <div>Cart</div>
-          </div>
-          <div className='header-right-item'>
-            <FaHeart className='icons' />
+
+          </Link>
+
+          <Link
+            to="/wishlist"
+            className="header-right-item wishlist-link"
+          >
+
+            <div className="wishlist-icon-container">
+
+              <FaHeart className="icons" />
+
+              {
+                wishlist.length > 0 &&
+
+                <span className="wishlist-count">
+
+                  {wishlist.length}
+
+                </span>
+
+              }
+
+            </div>
+
             <div>Wishlist</div>
-          </div>
+
+          </Link>
+
           <div className='header-right-item'>
             <FaBell className='icons' />
             <div>Notifications</div>

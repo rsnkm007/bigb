@@ -1,8 +1,12 @@
+import { useContext } from "react";
+import { WishlistContext } from "../../context/WishlistContext";
+
 import { useParams } from "react-router-dom";
 import products from "../../data/products";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import "./ProductDetails.css";
+import { CartContext } from "../../context/CartContext";
 
 function ProductDetails() {
 
@@ -13,6 +17,15 @@ function ProductDetails() {
             item.category === category &&
             item.id === Number(id)
     );
+
+    const {
+        addToWishlist,
+        isInWishlist
+    } = useContext(WishlistContext);
+
+    const {
+        addToCart
+    } = useContext(CartContext);
 
     if (!product) {
         return (
@@ -29,6 +42,34 @@ function ProductDetails() {
         ((product.regular_price - product.offer_price) /
             product.regular_price) * 100
     );
+
+    const handleShare = async () => {
+
+        const shareData = {
+
+            title: product.name,
+
+            text: product.description,
+
+            url: window.location.href
+
+        };
+
+        if (navigator.share) {
+
+            await navigator.share(shareData);
+
+        }
+
+        else {
+
+            await navigator.clipboard.writeText(window.location.href);
+
+            alert("Product link copied!");
+
+        }
+
+    };
 
     return (
 
@@ -81,20 +122,45 @@ function ProductDetails() {
 
                         <button
                             className="buy-btn"
-                            onClick={() => {
-                                // Buy Now logic
-                            }}
                         >
                             Buy Now
                         </button>
 
                         <button
                             className="cart-btn"
-                            onClick={() => {
-                                // Add to Cart logic
-                            }}
+                            onClick={() => addToCart(product)}
                         >
                             Add to Cart
+                        </button>
+
+                        <button
+                            className="wishlist-btn"
+                            onClick={() => addToWishlist(product)}
+                        >
+
+                            {
+
+                                isInWishlist(product.category, product.id)
+
+                                    ?
+
+                                    "❤️ Wishlisted"
+
+                                    :
+
+                                    "🤍 Wishlist"
+
+                            }
+
+                        </button>
+
+                        <button
+                            className="share-btn"
+                            onClick={handleShare}
+                        >
+
+                            🔗 Share
+
                         </button>
 
                     </div>

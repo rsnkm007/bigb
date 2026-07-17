@@ -3,6 +3,9 @@ import products from "../../data/products";
 import "./Category.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import { useContext } from "react";
+import { WishlistContext } from "../../context/WishlistContext";
+import { CartContext } from "../../context/CartContext";
 
 function Category() {
 
@@ -11,6 +14,15 @@ function Category() {
     const filteredProducts = products.filter(
         product => product.category === categoryName
     );
+
+    const {
+        addToWishlist,
+        isInWishlist
+    } = useContext(WishlistContext);
+
+    const {
+        addToCart
+    } = useContext(CartContext);
 
     return (
 
@@ -70,6 +82,7 @@ function Category() {
 
                             </p>
                             <div className="category-buttons">
+
                                 <button
                                     className="btn"
                                     onClick={(e) => e.preventDefault()}
@@ -79,10 +92,44 @@ function Category() {
 
                                 <button
                                     className="btn"
-                                    onClick={(e) => e.preventDefault()}
+                                    onClick={(e) => {
+
+                                        e.preventDefault();
+
+                                        addToCart(product);
+
+                                    }}
                                 >
                                     Add to Cart
                                 </button>
+
+                                <button
+                                    className="btn"
+                                    onClick={(e) => {
+
+                                        e.preventDefault();
+
+                                        addToWishlist(product);
+
+                                    }}
+                                >
+
+                                    {
+
+                                        isInWishlist(product.category, product.id)
+
+                                            ?
+
+                                            "❤️ Wishlisted"
+
+                                            :
+
+                                            "🤍 Wishlist"
+
+                                    }
+
+                                </button>
+
                             </div>
 
                         </div>

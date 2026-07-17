@@ -87,3 +87,18 @@ p{
   color: rgba(255, 0, 4, 1);
   border: 1px solid rgba(255, 0, 4, 1)
 }
+
+
+.category-buttons .btn:last-child{
+
+    background:#ff4d6d;
+
+    color:white;
+
+}
+
+.category-buttons .btn:last-child:hover{
+
+    background:#ff1f4b;
+
+}

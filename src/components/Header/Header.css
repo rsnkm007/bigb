@@ -107,3 +107,38 @@
 .header-right .icons:hover {
   cursor: pointer;
 }
+
+
+.wishlist-link{
+    text-decoration:none;
+    color:white;
+}
+
+.wishlist-icon-container{
+    position:relative;
+}
+
+.wishlist-count{
+
+    position:absolute;
+
+    top:4px;
+    right:-8px;
+
+    background:white;
+
+    color:red;
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:10px;
+    font-weight:bold;
+
+}
