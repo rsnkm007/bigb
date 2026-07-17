@@ -1,5 +1,5 @@
 import "./PopularCategory.css";
-
+import { Link } from "react-router-dom";
 import phone2 from "../../assets/Electronics/Phones/phone2.jpeg";
 import laptop1 from "../../assets/Electronics/Laptop/laptop1.webp";
 import shirt2 from "../../assets/Shirts/shirt-2.jpeg";
@@ -19,12 +19,12 @@ function PopularCategory() {
     {
       id: crypto.randomUUID(),
       image: laptop1,
-      category: "Latops"
+      category: "Laptops"
     },
     {
       id: crypto.randomUUID(),
       image: shirt2,
-      category: "casuals"
+      category: "Casuals"
     },
     {
       id: crypto.randomUUID(),
@@ -36,27 +36,45 @@ function PopularCategory() {
       image: shoe2,
       category: "Shoes"
     },
-    {
-      id: crypto.randomUUID(),
-      image: micro1,
-      category: "Micro Oven"
-    },
+
     {
       id: crypto.randomUUID(),
       image: watch2,
       category: "Wearables"
+    },
+
+    {
+      id: crypto.randomUUID(),
+      image: micro1,
+      category: "More categories"
     }
   ];
 
   return (
     <div className="popular-categories">
       <div className="popular-categories-heading">Popular Categories</div>
-      <div className='categories-container'>
+      <div className="categories-container">
         {categoriesDetails.map((item) => (
-          <div className="categories" key={item.id}>
-            <img src={item.image} alt={item.category} />
-            <div className="category-name">{item.category}</div>
-          </div>
+
+          <Link
+            key={item.id}
+            to={
+              item.category === "More categories"
+                ? "/more-categories"
+                : `/category/${item.category}`
+            }
+            className="category-link"
+          >
+
+            <div className="categories">
+              <img src={item.image} alt={item.category} />
+              <div className="category-name">
+                {item.category}
+              </div>
+            </div>
+
+          </Link>
+
         ))}
       </div>
     </div>

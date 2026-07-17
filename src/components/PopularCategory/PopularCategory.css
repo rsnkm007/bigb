@@ -35,6 +35,10 @@
   gap: 10px;
 }
 
+.category-link{
+  text-decoration: none;
+}
+
 .popular-categories img {
   height: 180px;
   width: 180px;
@@ -52,3 +56,4 @@
   font-weight: bold;
   cursor: pointer;
 }
+
