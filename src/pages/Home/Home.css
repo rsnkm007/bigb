@@ -1,9 +1,6 @@
 body {
-  margin-top: 145px;
-  position: relative;
   font-family: 'Poppins', sans-serif;
-  min-height: 1000vh;
-  overflow-x: hidden;
+  margin: 0px 10px;
 }
 
 body::-webkit-scrollbar {
@@ -22,4 +19,101 @@ p {
   height: 100%;
   object-fit: fill;
   z-index: -10;
+}
+
+
+/* ===============================
+   Large Laptops (1200px and below)
+================================== */
+
+@media (max-width: 1200px) {
+
+  body {
+    margin: 0 8px;
+  }
+
+}
+
+
+/* ===============================
+   Tablets (992px and below)
+================================== */
+
+@media (max-width: 992px) {
+
+  body {
+    margin: 0 6px;
+  }
+
+  .background-video {
+    object-fit: cover;
+  }
+
+}
+
+
+/* ===============================
+   Large Phones (768px and below)
+================================== */
+
+@media (max-width: 768px) {
+
+  body {
+    margin: 0 4px;
+  }
+
+  .background-video {
+    object-fit: cover;
+  }
+
+}
+
+
+/* ===============================
+   Mobile Phones (576px and below)
+================================== */
+
+@media (max-width: 576px) {
+
+  body {
+    margin: 0;
+  }
+
+  .background-video {
+    object-fit: cover;
+  }
+
+}
+
+
+/* ===============================
+   Small Phones (400px and below)
+================================== */
+
+@media (max-width: 400px) {
+
+  body {
+    margin: 0;
+  }
+
+  .background-video {
+    object-fit: cover;
+  }
+
+}
+
+.home-container{
+    padding: 0 10px;
+}
+
+@media (max-width:768px){
+    .home-container{
+        padding: 0 5px;
+    }
+}
+
+@media (max-width:576px){
+    .home-container{
+        padding: 0;
+    }
 }

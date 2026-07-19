@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import WishlistProvider from "./context/WishlistProvider";
 import CartProvider from "./context/CartProvider";
 import AddressProvider from "./context/AddressProvider";
+import OrderProvider from "./context/OrderProvider";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -13,7 +14,11 @@ createRoot(document.getElementById("root")).render(
 
         <AddressProvider>
 
-            <App />
+            <OrderProvider>
+
+                <App/>
+
+            </OrderProvider>
 
         </AddressProvider>
 

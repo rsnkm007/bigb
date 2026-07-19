@@ -5,6 +5,8 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { AddressContext } from "../../context/AddressContext";
 import API from "../../api/paymentApi";
+import { useNavigate } from "react-router-dom";
+import { OrderContext } from "../../context/OrderContext";
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -13,19 +15,16 @@ function Payment() {
 
   const {
 
+    cart,
     totalItems,
-
     totalMRP,
-
     totalDiscount,
-
     totalPrice,
-
     deliveryCharge,
+    finalAmount,
+    clearCart
 
-    finalAmount
-
-  } = useContext(CartContext);
+} = useContext(CartContext);
 
   const {
 
@@ -40,6 +39,14 @@ function Payment() {
     item => item.id === selectedAddress
 
   );
+
+  const {
+
+    addOrder
+
+} = useContext(OrderContext);
+
+  const navigate = useNavigate();
 
   const handlePayment = async () => {
 
@@ -85,13 +92,59 @@ function Payment() {
 
             },
 
-            handler: function (response) {
+            handler: async function(response){
 
-                alert("Payment Successful!");
+    try{
 
-                console.log(response);
+        const verify = await API.post(
 
-            }
+            "/payment/verify",
+
+            response
+
+        );
+
+        if(verify.data.success){
+
+            addOrder({
+
+    orderId: response.razorpay_order_id,
+
+    paymentId: response.razorpay_payment_id,
+
+    amount: finalAmount,
+
+    products: [...cart],
+
+    address,
+
+    date: new Date().toLocaleString(),
+
+    status: "Paid"
+
+});
+
+clearCart();
+
+navigate("/order-success");
+
+        }
+
+        else{
+
+            alert("Payment Verification Failed");
+
+        }
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+    }
+
+}
 
         };
 

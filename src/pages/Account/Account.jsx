@@ -1,7 +1,8 @@
 import "./Account.css";
 
-import { auth } from "../../firebase/firebase";
-import { signOut } from "firebase/auth";
+import { auth, provider } from "../../firebase/firebase";
+import { signOut, signInWithPopup } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
 
 import {
   FaUserCircle,
@@ -16,7 +17,7 @@ import {
   FaGoogle
 } from "react-icons/fa";
 
-import { useNavigate } from "react-router-dom";
+import Header from "../../components/Header/Header";
 
 function Account() {
 
@@ -28,13 +29,27 @@ function Account() {
     await signOut(auth);
   };
 
-  const handleGoogleLogin = () => {
-    navigate("/");
+  const handleGoogleLogin = async () => {
+
+    try {
+
+      await signInWithPopup(auth, provider);
+
+      navigate("/");
+
+    } catch (error) {
+
+      console.error(error);
+
+    }
+
   };
 
   return (
 
     <div className="account-page">
+
+      <Header />
 
       {/* Profile */}
 
@@ -94,15 +109,18 @@ function Account() {
 
       <div className="account-menu">
 
-        <div className="menu-item">
+        <Link
+          to="/orders"
+          className="menu-item"
+        >
           <FaBoxOpen />
           <span>My Orders</span>
-        </div>
+        </Link>
 
-        <div className="menu-item">
+        <Link to="/wishlist" className="menu-item">
           <FaHeart />
           <span>Wishlist</span>
-        </div>
+        </Link>
 
         <div className="menu-item">
           <FaMapMarkerAlt />

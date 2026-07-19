@@ -57,3 +57,210 @@
   cursor: pointer;
 }
 
+/* ==========================================
+            LARGE TABLETS (1200px)
+========================================== */
+
+@media (max-width:1200px){
+
+    .main-content-sub .offer-details{
+
+        font-size:34px;
+
+    }
+
+    .categories-container{
+
+        gap:18px;
+
+    }
+
+    .popular-categories img{
+
+        width:160px;
+        height:160px;
+
+    }
+
+}
+
+
+/* ==========================================
+            TABLETS (992px)
+========================================== */
+
+@media (max-width:992px){
+
+    .main-content-sub .offer-details{
+
+        font-size:30px;
+
+        text-align:center;
+
+    }
+
+    .main-content-2{
+
+        gap:15px;
+
+    }
+
+    .categories-container{
+
+        gap:15px;
+
+    }
+
+    .popular-categories img{
+
+        width:140px;
+        height:140px;
+
+    }
+
+    .popular-categories .category-name{
+
+        font-size:14px;
+
+        padding:8px 16px;
+
+    }
+
+}
+
+
+/* ==========================================
+            MOBILE (768px)
+========================================== */
+
+@media (max-width:768px){
+
+    .main-content-sub .offer-details{
+
+        font-size:26px;
+
+        text-align:center;
+
+    }
+
+    .main-content-2{
+
+        gap:12px;
+
+    }
+
+    .categories-container{
+
+        gap:12px;
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .categories{
+
+        gap:8px;
+
+    }
+
+    .popular-categories img{
+
+        width:120px;
+        height:120px;
+
+    }
+
+    .popular-categories .category-name{
+
+        font-size:13px;
+
+        padding:7px 14px;
+
+    }
+
+}
+
+
+/* ==========================================
+            SMALL MOBILE (576px)
+========================================== */
+
+@media (max-width:576px){
+
+    .main-content-sub .offer-details{
+
+        font-size:22px;
+
+    }
+
+    .main-content-2{
+
+        gap:10px;
+
+    }
+
+    .categories-container{
+
+        gap:10px;
+
+    }
+
+    .popular-categories img{
+
+        width:100px;
+        height:100px;
+
+    }
+
+    .popular-categories .category-name{
+
+        font-size:12px;
+
+        padding:6px 12px;
+
+    }
+
+}
+
+
+/* ==========================================
+            EXTRA SMALL MOBILE (400px)
+========================================== */
+
+@media (max-width:400px){
+
+    .main-content-sub .offer-details{
+
+        font-size:18px;
+
+    }
+
+    .main-content-2{
+
+        gap:8px;
+
+    }
+
+    .categories-container{
+
+        gap:8px;
+
+    }
+
+    .popular-categories img{
+
+        width:85px;
+        height:85px;
+
+    }
+
+    .popular-categories .category-name{
+
+        font-size:11px;
+
+        padding:5px 10px;
+
+    }
+
+}

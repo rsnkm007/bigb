@@ -4,6 +4,11 @@ import { useContext } from "react";
 
 import { CartContext } from "../../context/CartContext";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+import LoginRequiredModal from "../../components/LoginRequiredModal/LoginRequiredModal";
+
+import { auth } from "../../firebase/firebase";
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -35,6 +40,31 @@ function Cart() {
   } = useContext(CartContext);
 
   const navigate = useNavigate();
+  const user = auth.currentUser;
+
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
+  const handleCheckout = () => {
+
+    if (user?.isAnonymous) {
+
+        setShowLoginModal(true);
+
+        return;
+
+    }
+
+    navigate("/checkout");
+
+};
+
+const handleGoogleLogin = () => {
+
+    setShowLoginModal(false);
+
+    navigate("/account");
+
+};
 
   return (
 
@@ -317,11 +347,9 @@ function Cart() {
 
                   <button
                     className="checkout-btn"
-                    onClick={() => navigate("/checkout")}
+                    onClick={handleCheckout}
                   >
-
                     Proceed to Checkout
-
                   </button>
 
                 </div>
@@ -333,6 +361,15 @@ function Cart() {
         }
 
       </div>
+      <LoginRequiredModal
+
+    isOpen={showLoginModal}
+
+    onClose={() => setShowLoginModal(false)}
+
+    onLogin={handleGoogleLogin}
+
+/>
 
       <Footer />
 

@@ -13,7 +13,7 @@ import "./Header.css";
 
 function Header() {
   const { wishlist } = useContext(WishlistContext);
-  const {totalItems} = useContext(CartContext);
+  const { totalItems } = useContext(CartContext);
   return (
     <>
       <header className="header">
@@ -29,7 +29,13 @@ function Header() {
         </div>
 
         <div className="header-middle">
-          <h1>Welcome to BigB</h1>
+
+          <Link
+            to="/"
+            className="header-logo-link"
+          >
+            <h1>Welcome to BigB</h1>
+          </Link>
 
         </div>
 

@@ -165,6 +165,12 @@ function CartProvider({ children }) {
 
     };
 
+    const clearCart = () => {
+
+    setCart([]);
+
+};
+
     // Total Price
 
     const totalPrice = cart.reduce(
@@ -231,8 +237,9 @@ const finalAmount = totalPrice + deliveryCharge;
 
     deliveryCharge,
 
-    finalAmount
+    finalAmount, 
 
+    clearCart
 }}
 
         >

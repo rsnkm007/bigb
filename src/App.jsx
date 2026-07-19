@@ -3,6 +3,8 @@ import { auth } from "./firebase/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Checkout from "./pages/Checkout/Checkout";
+import OrderSuccess from "./pages/OrderSuccess/OrderSuccess";
+import MyOrders from "./pages/MyOrders/MyOrders";
 
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
@@ -38,6 +40,26 @@ function App() {
               ? <Account />
               : <Navigate to="/" />
           }
+        />
+
+        <Route
+
+          path="/orders"
+
+          element={
+
+            loggedIn
+
+              ?
+
+              <MyOrders />
+
+              :
+
+              <Navigate to="/" />
+
+          }
+
         />
 
         <Route
@@ -127,6 +149,26 @@ function App() {
 
               <Navigate to="/" />
           }
+        />
+
+        <Route
+
+          path="/order-success"
+
+          element={
+
+            loggedIn
+
+              ?
+
+              <OrderSuccess />
+
+              :
+
+              <Navigate to="/" />
+
+          }
+
         />
 
       </Routes>

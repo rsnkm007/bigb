@@ -20,10 +20,12 @@ function Home() {
         <source src={bgVideo} type="video/mp4" />
       </video>
 
-      <Header />
-      <MainContent />
-      <PopularCategory />
-      <Footer />
+      <div className="home-container">
+    <Header />
+    <MainContent />
+    <PopularCategory />
+    <Footer />
+  </div>
     </>
   );
 }

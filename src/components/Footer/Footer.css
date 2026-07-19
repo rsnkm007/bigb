@@ -1,9 +1,9 @@
 .footer {
-  display: flex;
+  display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
   background-color: rgb(184, 223, 255, 0.7);
   backdrop-filter: blur(5px);
   align-items: center;
-  justify-content: space-between;
   padding: 20px 100px;
   font-size: 14px;
   margin-top: 40px;
@@ -117,4 +117,229 @@
 
 .icon:hover{
   color: rgba(255, 0, 4, 1);
+}
+
+
+
+/* ==========================================
+            LARGE TABLETS (1200px)
+========================================== */
+
+@media (max-width:1200px){
+
+    .footer{
+
+        padding:20px 60px;
+
+    }
+
+    .footer .footer-logo{
+
+        font-size:26px;
+
+    }
+
+    .footer-mid-header{
+
+        font-size:18px;
+
+    }
+
+    .footer-right-header{
+
+        font-size:20px;
+
+    }
+
+}
+
+
+/* ==========================================
+            TABLETS (992px)
+========================================== */
+
+@media (max-width:992px){
+
+    .footer{
+
+        padding:20px 40px;
+
+        gap:30px;
+
+        flex-wrap:wrap;
+
+    }
+
+    .footer-left{
+
+        width:100%;
+
+    }
+
+    .footer-mid1,
+    .footer-mid2{
+
+        flex:1;
+
+    }
+
+    .footer-right{
+
+        width:100%;
+
+    }
+
+    .footer-icons{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+/* ==========================================
+            MOBILE (768px)
+========================================== */
+
+@media (max-width:768px){
+
+    .footer{
+
+      display:grid;
+
+        grid-template-columns:1fr;
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
+        text-align:center;
+
+        padding:25px;
+
+        gap:30px;
+
+    }
+
+    .footer-left{
+
+        align-items:center;
+
+    }
+
+    .bigb-about{
+
+        max-width:100%;
+
+    }
+
+    .footer-mid1,
+    .footer-mid2{
+
+        align-items:center;
+
+    }
+
+    .footer-right{
+
+        width:100%;
+
+    }
+
+    .footer-icons{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+/* ==========================================
+            SMALL MOBILE (576px)
+========================================== */
+
+@media (max-width:576px){
+
+    .footer{
+
+        margin:30px 10px 0;
+
+        padding:20px 15px;
+
+        font-size:13px;
+
+    }
+
+    .footer .footer-logo{
+
+        font-size:24px;
+
+    }
+
+    .footer-mid-header{
+
+        font-size:18px;
+
+    }
+
+    .footer-right-header{
+
+        font-size:18px;
+
+    }
+
+    .footer-icons{
+
+        font-size:22px;
+
+        gap:18px;
+
+    }
+
+}
+
+
+/* ==========================================
+            EXTRA SMALL MOBILE (400px)
+========================================== */
+
+@media (max-width:400px){
+
+    .footer{
+
+        padding:15px 10px;
+
+        gap:20px;
+
+    }
+
+    .footer .footer-logo{
+
+        font-size:22px;
+
+    }
+
+    .footer-mid-header{
+
+        font-size:16px;
+
+    }
+
+    .footer-right-header{
+
+        font-size:16px;
+
+    }
+
+    .footer-icons{
+
+        font-size:20px;
+
+        gap:15px;
+
+    }
+
 }
