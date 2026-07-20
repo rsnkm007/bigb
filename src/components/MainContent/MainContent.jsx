@@ -11,8 +11,8 @@ import products from "../../data/products";
 
 // Offer Images
 import offer1 from "../../assets/Offer_Banner/special_offer1.jpeg";
-import offer2 from "../../assets/Offer_Banner/special_offer2.jpeg";
-import offer3 from "../../assets/Offer_Banner/special_offer3.jpeg";
+import offer2 from "../../assets/Offer_Banner/special_offer2.png";
+import offer3 from "../../assets/Offer_Banner/special_offer3.png";
 
 function MainContent() {
 

@@ -1,0 +1,123 @@
+import ka1 from "../../assets/Electronics/Kitchen Appliances/KA1.webp";
+import ka2 from "../../assets/Electronics/Kitchen Appliances/ka2.webp";
+import ka3 from "../../assets/Electronics/Kitchen Appliances/ka3.webp";
+import ka4 from "../../assets/Electronics/Kitchen Appliances/ka4.webp";
+import ka5 from "../../assets/Electronics/Kitchen Appliances/ka5.webp";
+import ka6 from "../../assets/Electronics/Kitchen Appliances/ka6.webp";
+import ka7 from "../../assets/Electronics/Kitchen Appliances/ka7.webp";
+import ka8 from "../../assets/Electronics/Kitchen Appliances/ka8.webp";
+import ka9 from "../../assets/Electronics/Kitchen Appliances/ka9.webp";
+
+const kitchenAppliance = [
+
+    {
+        id: 1,
+        featured: false,
+        category: "Kitchen Appliances",
+        company: "Philips",
+        name: "Philips Digital Air Fryer",
+        description: "6.2L Capacity | Rapid Air Technology | Touch Control | 1700W",
+        regular_price: 12995,
+        offer_price: 9999,
+        image: ka2
+    },
+
+    {
+        id: 2,
+        featured: true,
+        category: "Kitchen Appliances",
+        company: "NutriPro",
+        name: "NutriPro Mixer Grinder",
+        description: "500W Motor | 3 Jars | Multipurpose Blender | Stainless Steel Blades",
+        regular_price: 3499,
+        offer_price: 2499,
+        image: ka3
+    },
+
+    {
+        id: 3,
+        featured: false,
+        category: "Kitchen Appliances",
+        company: "Prestige",
+        name: "Prestige Mixer Grinder",
+        description: "750W Motor | 3 Stainless Steel Jars | Overload Protection",
+        regular_price: 4995,
+        offer_price: 3899,
+        image: ka4
+    },
+
+    {
+        id: 4,
+        featured: false,
+        category: "Kitchen Appliances",
+        company: "Pigeon",
+        name: "Pigeon Stainless Steel Coffee Maker",
+        description: "600ml Capacity | Stainless Steel Body | Ergonomic Handle",
+        regular_price: 1999,
+        offer_price: 1499,
+        image: ka5
+    },
+
+    {
+        id: 5,
+        featured: false,
+        category: "Kitchen Appliances",
+        company: "Bosch",
+        name: "Bosch Food Processor",
+        description: "1000W Motor | Multi-function Processor | 4 Jars | Dough Kneading",
+        regular_price: 11999,
+        offer_price: 9999,
+        image: ka6
+    },
+
+    {
+        id: 6,
+        featured: false,
+        category: "Kitchen Appliances",
+        company: "Agaro",
+        name: "AGARO Digital Air Fryer",
+        description: "4.5L Capacity | LED Touch Panel | Oil-Free Cooking | 1400W",
+        regular_price: 7999,
+        offer_price: 5999,
+        image: ka7
+    },
+
+    {
+        id: 7,
+        featured: false,
+        category: "Kitchen Appliances",
+        company: "Bell",
+        name: "Bell Digital Air Fryer Oven",
+        description: "12L Capacity | 10 Preset Menus | Rotisserie | Touch Display",
+        regular_price: 10999,
+        offer_price: 8799,
+        image: ka8
+    },
+
+    {
+        id: 8,
+        featured: false,
+        category: "Kitchen Appliances",
+        company: "Prestige",
+        name: "Prestige Induction Cooktop",
+        description: "2000W | Automatic Voltage Regulator | Touch Panel | Indian Menu",
+        regular_price: 3999,
+        offer_price: 2999,
+        image: ka9
+    },
+
+    {
+        id: 9,
+        featured: false,
+        category: "Kitchen Appliances",
+        company: "Inalsa",
+        name: "Inalsa Electric Chopper",
+        description: "400W Motor | 2L Stainless Steel Bowl | Multipurpose Vegetable Chopper",
+        regular_price: 2999,
+        offer_price: 2199,
+        image: ka1
+    }
+
+];
+
+export default kitchenAppliance;

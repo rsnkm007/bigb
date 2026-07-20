@@ -6,6 +6,18 @@ import Checkout from "./pages/Checkout/Checkout";
 import OrderSuccess from "./pages/OrderSuccess/OrderSuccess";
 import MyOrders from "./pages/MyOrders/MyOrders";
 
+
+import About from "./pages/About/About";
+import Team from "./pages/Team/Team";
+import Careers from "./pages/Careers/Careers";
+import Blog from "./pages/Blog/Blog";
+
+import Terms from "./pages/Terms/Tems";
+import Refund from "./pages/RefundPolicy/RefundPolicy";
+import Privacy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import CookiesPolicy from "./pages/CookiesPolicy/CookiesPolicy";
+
+
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import Category from "./pages/Category/Category";
@@ -15,6 +27,13 @@ import Account from "./pages/Account/Account";
 import Wishlist from "./pages/Wishlist/Wishlist";
 import Cart from "./pages/Cart/Cart";
 import Payment from "./pages/Payment/Payment";
+import Search from "./pages/Search/Search";
+import Notifications from "./pages/Notifications/Notifications";
+
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import Address from "./pages/Address/Address";
+import HelpSupport from "./pages/HelpSupport/HelpSupport";
+
 
 
 function App() {
@@ -31,6 +50,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
 
         <Route
@@ -170,6 +190,45 @@ function App() {
           }
 
         />
+
+        <Route
+          path="/search/:keyword"
+          element={<Search />}
+        />
+
+        <Route
+
+          path="/notifications"
+
+          element={<Notifications />}
+
+        />
+
+        <Route
+          path="/address"
+          element={<Address />}
+        />
+
+        <Route
+          path="/help-support"
+          element={<HelpSupport />}
+        />
+
+        <Route path="/about" element={<About />} />
+
+        <Route path="/team" element={<Team />} />
+
+        <Route path="/careers" element={<Careers />} />
+
+        <Route path="/blog" element={<Blog />} />
+
+        <Route path="/terms" element={<Terms />} />
+
+        <Route path="/refund" element={<Refund />} />
+
+        <Route path="/privacy" element={<Privacy />} />
+
+        <Route path="/cookies" element={<CookiesPolicy />} />
 
       </Routes>
     </BrowserRouter>

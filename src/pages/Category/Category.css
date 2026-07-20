@@ -89,16 +89,17 @@ p{
 }
 
 
-.category-buttons .btn:last-child{
-
-    background:#ff4d6d;
-
-    color:white;
-
+.product-detail-container button{
+  background-color: rgba(255, 0, 4, 1);
+  color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 1rem;
+  padding: 5px 20px;
+  cursor: pointer;
 }
 
-.category-buttons .btn:last-child:hover{
-
-    background:#ff1f4b;
-
+.product-detail-container button:hover{
+  background-color: white;
+  color: rgba(255, 0, 4, 1);
+  border: 1px solid rgba(255, 0, 4, 1);
 }

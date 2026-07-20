@@ -116,6 +116,11 @@
   cursor: pointer;
 }
 
+.header-right-item{
+    
+    text-decoration: none;
+}
+
 
 .wishlist-link{
     text-decoration:none;

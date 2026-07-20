@@ -8,6 +8,17 @@ import casuals from "./categories/casuals";
 import microOven from "./categories/microOven";
 import television from "./categories/television";
 import refrigerator from "./categories/fridge";
+import ac from "./categories/ac";
+import kitchenAppliance from "./categories/kitchenAppliance";
+import game from "./categories/game";
+import books from "./categories/books";
+import beauty from "./categories/beauty";
+import sport from "./categories/sports";
+import bag from "./categories/bag";
+import toy from "./categories/toys";
+import grocery from "./categories/groceries";
+import study from "./categories/study";
+
 
 const products = [
 
@@ -45,7 +56,27 @@ const products = [
 
   ...television,
 
-  ...refrigerator
+  ...refrigerator,
+
+  ...ac,
+
+  ...kitchenAppliance,
+
+  ...game,
+
+  ...books, 
+
+  ...beauty,
+
+  ...sport,
+
+  ...bag,
+
+  ...toy,
+
+  ...grocery,
+
+  ...study
 
 ];
 

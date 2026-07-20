@@ -1,0 +1,225 @@
+.careers-page{
+
+    min-height:100vh;
+
+    padding:60px 20px;
+
+    background:linear-gradient(135deg,#f8f9fa,#e8f0ff);
+
+}
+
+.careers-container{
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+.careers-container h1{
+
+    text-align:center;
+
+    color:#ff0004;
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+.careers-subtitle{
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    max-width:750px;
+
+    margin:0 auto 50px;
+
+}
+
+.job-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.job-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.job-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+.job-card h2{
+
+    color:#ff0004;
+
+    margin-bottom:20px;
+
+}
+
+.job-card p{
+
+    margin-bottom:12px;
+
+    color:#555;
+
+    line-height:1.6;
+
+}
+
+.apply-btn{
+
+    margin-top:20px;
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#ff0004;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.apply-btn:hover{
+
+    background:#d90003;
+
+    transform:scale(1.03);
+
+}
+
+/* =====================
+      992px
+===================== */
+
+@media (max-width:992px){
+
+    .careers-container h1{
+
+        font-size:36px;
+
+    }
+
+    .job-list{
+
+        gap:25px;
+
+    }
+
+}
+
+
+/* =====================
+      768px
+===================== */
+
+@media (max-width:768px){
+
+    .careers-page{
+
+        padding:40px 15px;
+
+    }
+
+    .careers-container h1{
+
+        font-size:32px;
+
+    }
+
+    .careers-subtitle{
+
+        font-size:16px;
+
+        margin-bottom:35px;
+
+    }
+
+    .job-card{
+
+        padding:25px;
+
+    }
+
+}
+
+
+/* =====================
+      576px
+===================== */
+
+@media (max-width:576px){
+
+    .job-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .careers-container h1{
+
+        font-size:28px;
+
+    }
+
+    .job-card h2{
+
+        font-size:22px;
+
+    }
+
+    .job-card p{
+
+        font-size:15px;
+
+    }
+
+    .apply-btn{
+
+        font-size:15px;
+
+        padding:10px;
+
+    }
+
+}

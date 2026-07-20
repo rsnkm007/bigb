@@ -1,0 +1,55 @@
+.about-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:50px 20px;
+
+    background:linear-gradient(135deg,#f5f7fa,#dfe9f3);
+
+}
+
+.about-container{
+
+    max-width:900px;
+
+    width:100%;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.about-container h1{
+
+    font-size:42px;
+
+    color:#ff0004;
+
+    margin-bottom:25px;
+
+}
+
+.about-container p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+    color:#444;
+
+    text-align:justify;
+
+}

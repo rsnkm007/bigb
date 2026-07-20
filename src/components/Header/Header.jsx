@@ -1,7 +1,14 @@
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import { WishlistContext } from "../../context/WishlistContext";
 import { CartContext } from "../../context/CartContext";
+import SearchContext from "../../context/SearchContext";
+import SideMenu from "../SideMenu/SideMenu";
+
+import { signOut } from "firebase/auth";
+
+import { auth } from "../../firebase/firebase";
+import { NotificationContext } from "../../context/NotificationContext";
 
 import { FaSearch } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
@@ -14,6 +21,38 @@ import "./Header.css";
 function Header() {
   const { wishlist } = useContext(WishlistContext);
   const { totalItems } = useContext(CartContext);
+  const [keyword, setKeyword] = useState("");
+  const { setSearchTerm } = useContext(SearchContext);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+
+    const value = keyword.trim();
+
+    if (!value) return;
+
+    setSearchTerm(value);
+
+    navigate(`/search/${encodeURIComponent(value)}`);
+
+  };
+  const handleLogout = async () => {
+
+    await signOut(auth);
+
+    setMenuOpen(false);
+
+  };
+
+  const { notifications } = useContext(NotificationContext);
+
+  const unreadCount = notifications.filter(
+
+    notification => !notification.read
+
+  ).length;
   return (
     <>
       <header className="header">
@@ -22,8 +61,24 @@ function Header() {
           <div className="search-box">
             <FaSearch className="search-icon" />
             <div className="search-input">
-              <input type="text" placeholder="Search BigB.in" />
-              <button>Search</button>
+              <input
+                type="text"
+                placeholder="Search BigB.in"
+                value={keyword}
+                onChange={(e) => setKeyword(e.target.value)}
+                onKeyDown={(e) => {
+
+                  if (e.key === "Enter") {
+
+                    handleSearch();
+
+                  }
+
+                }}
+              />
+              <button onClick={handleSearch}>
+                Search
+              </button>
             </div>
           </div>
         </div>
@@ -101,17 +156,54 @@ function Header() {
 
           </Link>
 
-          <div className='header-right-item'>
-            <FaBell className='icons' />
+          <Link
+
+            to="/notifications"
+
+            className="header-right-item wishlist-link"
+
+          >
+
+            <div className="wishlist-icon-container">
+
+              <FaBell className="icons" />
+
+              {
+
+                unreadCount > 0 &&
+
+                <span className="wishlist-count">
+
+                  {unreadCount}
+
+                </span>
+
+              }
+
+            </div>
+
             <div>Notifications</div>
-          </div>
-          <div className='header-right-item'>
-            <FaBars className='icons' />
+
+          </Link>
+          <div
+            className="header-right-item"
+            onClick={() => setMenuOpen(true)}
+          >
+            <FaBars className="icons" />
             <div>Menu</div>
           </div>
         </div>
 
       </header >
+      <SideMenu
+
+        isOpen={menuOpen}
+
+        onClose={() => setMenuOpen(false)}
+
+        onLogout={handleLogout}
+
+      />
     </>
   );
 }

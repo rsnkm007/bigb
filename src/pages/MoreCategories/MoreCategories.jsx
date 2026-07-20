@@ -10,6 +10,7 @@ import shirt from "../../assets/Shirts/shirt-2.jpeg";
 import washing from "../../assets/Electronics/Washing Machines/washing1.jpeg";
 import shoe from "../../assets/Shoes/shoe2.jpeg";
 import watch from "../../assets/Electronics/Wearables/watch2.jpeg";
+import study from "../../assets/Study/study1.jpeg";
 import micro from "../../assets/Electronics/Microwave/micro1.jpeg";
 import sofa from "../../assets/Furnitures/sofa1.jpg";
 import tv from "../../assets/Electronics/TV/TV1.webp";
@@ -132,8 +133,8 @@ function MoreCategories() {
 
     {
       id: 18,
-      name: "Watches",
-      image: watch
+      name: "Study",
+      image: study
     },
 
     {

@@ -122,30 +122,39 @@ function Account() {
           <span>Wishlist</span>
         </Link>
 
-        <div className="menu-item">
+        <Link
+          to="/address"
+          className="menu-item"
+        >
           <FaMapMarkerAlt />
           <span>Saved Addresses</span>
-        </div>
+        </Link>
 
         <div className="menu-item">
           <FaCreditCard />
           <span>Payment Methods</span>
         </div>
 
-        <div className="menu-item">
+        <Link
+          to="/notifications"
+          className="menu-item"
+        >
           <FaBell />
           <span>Notifications</span>
-        </div>
+        </Link>
 
         <div className="menu-item">
           <FaCog />
           <span>Settings</span>
         </div>
 
-        <div className="menu-item">
+        <Link
+          to="/help-support"
+          className="menu-item"
+        >
           <FaQuestionCircle />
           <span>Help & Support</span>
-        </div>
+        </Link>
 
       </div>
 

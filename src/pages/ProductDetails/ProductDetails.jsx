@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { WishlistContext } from "../../context/WishlistContext";
 
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import products from "../../data/products";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -11,6 +11,7 @@ import { CartContext } from "../../context/CartContext";
 function ProductDetails() {
 
     const { category, id } = useParams();
+    const navigate = useNavigate();
 
     const product = products.find(
         item =>
@@ -71,6 +72,14 @@ function ProductDetails() {
 
     };
 
+    const handleBuyNow = () => {
+
+        addToCart(product);
+
+        navigate("/cart");
+
+    };
+
     return (
 
         <>
@@ -122,6 +131,7 @@ function ProductDetails() {
 
                         <button
                             className="buy-btn"
+                            onClick={handleBuyNow}
                         >
                             Buy Now
                         </button>

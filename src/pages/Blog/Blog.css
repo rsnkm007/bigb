@@ -1,0 +1,249 @@
+.blog-page{
+
+    min-height:100vh;
+
+    padding:60px 20px;
+
+    background:linear-gradient(135deg,#eef2f7,#ffffff);
+
+}
+
+.blog-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.blog-container h1{
+
+    text-align:center;
+
+    font-size:42px;
+
+    color:#ff0004;
+
+    margin-bottom:15px;
+
+}
+
+.blog-subtitle{
+
+    text-align:center;
+
+    font-size:18px;
+
+    color:#555;
+
+    max-width:750px;
+
+    margin:0 auto 50px;
+
+    line-height:1.8;
+
+}
+
+.blog-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.blog-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.blog-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+.blog-category{
+
+    display:inline-block;
+
+    background:#ff0004;
+
+    color:white;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+.blog-card h2{
+
+    margin-bottom:10px;
+
+    color:#222;
+
+    font-size:24px;
+
+}
+
+.blog-date{
+
+    color:#888;
+
+    margin-bottom:18px;
+
+    font-size:15px;
+
+}
+
+.blog-description{
+
+    color:#555;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.read-more-btn{
+
+    border:none;
+
+    background:#ff0004;
+
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.read-more-btn:hover{
+
+    background:#d90003;
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================
+        992px
+========================== */
+
+@media (max-width:992px){
+
+    .blog-container h1{
+
+        font-size:36px;
+
+    }
+
+    .blog-grid{
+
+        gap:25px;
+
+    }
+
+}
+
+
+/* ==========================
+        768px
+========================== */
+
+@media (max-width:768px){
+
+    .blog-page{
+
+        padding:40px 15px;
+
+    }
+
+    .blog-container h1{
+
+        font-size:32px;
+
+    }
+
+    .blog-subtitle{
+
+        font-size:16px;
+
+        margin-bottom:35px;
+
+    }
+
+    .blog-card{
+
+        padding:25px;
+
+    }
+
+}
+
+
+/* ==========================
+        576px
+========================== */
+
+@media (max-width:576px){
+
+    .blog-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .blog-container h1{
+
+        font-size:28px;
+
+    }
+
+    .blog-card h2{
+
+        font-size:22px;
+
+    }
+
+    .blog-description{
+
+        font-size:15px;
+
+    }
+
+    .read-more-btn{
+
+        width:100%;
+
+    }
+
+}

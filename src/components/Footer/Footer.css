@@ -119,6 +119,14 @@
   color: rgba(255, 0, 4, 1);
 }
 
+.footer-link{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
 
 
 /* ==========================================
