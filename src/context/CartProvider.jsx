@@ -1,70 +1,93 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CartContext } from "./CartContext";
+
+import { auth } from "../firebase/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+
+import productApi from "../api/productApi";
 
 function CartProvider({ children }) {
 
     const [cart, setCart] = useState([]);
 
-    // Add Product
-    const addToCart = (product) => {
+    useEffect(() => {
 
-        const existingProduct = cart.find(
+        const unsubscribe = onAuthStateChanged(
 
-            item =>
+            auth,
 
-                item.category === product.category &&
-                item.id === product.id
+            async (user) => {
+
+                if (!user || user.isAnonymous) {
+
+                    setCart([]);
+
+                    return;
+
+                }
+
+                try {
+
+                    const response = await productApi.get(
+
+                        `/cart/${user.uid}`
+
+                    );
+
+                    setCart(response.data);
+
+                }
+
+                catch (error) {
+
+                    console.error(error);
+
+                }
+
+            }
 
         );
 
-        if (existingProduct) {
+        return () => unsubscribe();
 
-            setCart(
+    }, []);
 
-                cart.map(item =>
+    // Add Product
+    const addToCart = async (product) => {
 
-                    item.category === product.category &&
-                    item.id === product.id
+        const user = auth.currentUser;
 
-                        ?
+        if (!user || user.isAnonymous) {
 
-                        {
+            alert("Please login with Google to use Cart.");
 
-                            ...item,
-
-                            quantity: item.quantity + 1
-
-                        }
-
-                        :
-
-                        item
-
-                )
-
-            );
+            return;
 
         }
 
-        else {
+        try {
 
-            setCart(
+            await productApi.post("/cart", {
 
-                [
+                firebase_uid: user.uid,
 
-                    ...cart,
+                product_id: product.id
 
-                    {
+            });
 
-                        ...product,
+            const response = await productApi.get(
 
-                        quantity: 1
-
-                    }
-
-                ]
+                `/cart/${user.uid}`
 
             );
+
+            setCart(response.data);
+
+        }
+
+        catch (error) {
+
+            console.error(error);
 
         }
 
@@ -72,104 +95,173 @@ function CartProvider({ children }) {
 
     // Remove Product
 
-    const removeFromCart = (category, id) => {
+    const removeFromCart = async (category, id) => {
 
-        setCart(
+    const user = auth.currentUser;
 
-            cart.filter(
+    if (!user || user.isAnonymous) {
 
-                item =>
+        return;
 
-                    !(
+    }
 
-                        item.category === category &&
-                        item.id === id
+    try {
 
-                    )
+        await productApi.delete(
 
-            )
+            `/cart/${user.uid}/${id}`
 
         );
 
-    };
+        const response = await productApi.get(
+
+            `/cart/${user.uid}`
+
+        );
+
+        setCart(response.data);
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+    }
+
+};
 
     // Increase Quantity
 
-    const increaseQuantity = (category, id) => {
+    const increaseQuantity = async (category, id) => {
 
-        setCart(
+    const user = auth.currentUser;
 
-            cart.map(
+    if (!user || user.isAnonymous) {
 
-                item =>
+        return;
 
-                    item.category === category &&
-                    item.id === id
+    }
 
-                        ?
+    const product = cart.find(
 
-                        {
+        item =>
 
-                            ...item,
+            item.category === category &&
 
-                            quantity: item.quantity + 1
+            item.id === id
 
-                        }
+    );
 
-                        :
+    if (!product) return;
 
-                        item
+    try {
 
-            )
+        await productApi.put(
+
+            `/cart/${user.uid}/${id}`,
+
+            {
+
+                quantity: product.quantity + 1
+
+            }
 
         );
 
-    };
+        const response = await productApi.get(
+
+            `/cart/${user.uid}`
+
+        );
+
+        setCart(response.data);
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+    }
+
+};
 
     // Decrease Quantity
 
-    const decreaseQuantity = (category, id) => {
+    const decreaseQuantity = async (category, id) => {
 
-        setCart(
+    const user = auth.currentUser;
 
-            cart.map(
+    if (!user || user.isAnonymous) {
 
-                item =>
+        return;
 
-                    item.category === category &&
-                    item.id === id
+    }
 
-                        ?
+    const product = cart.find(
 
-                        {
+        item =>
 
-                            ...item,
+            item.category === category &&
 
-                            quantity: item.quantity - 1
+            item.id === id
 
-                        }
+    );
 
-                        :
+    if (!product) return;
 
-                        item
+    try {
 
-            )
+        if (product.quantity === 1) {
 
-            .filter(
+            await productApi.delete(
 
-                item => item.quantity > 0
+                `/cart/${user.uid}/${id}`
 
-            )
+            );
+
+        }
+
+        else {
+
+            await productApi.put(
+
+                `/cart/${user.uid}/${id}`,
+
+                {
+
+                    quantity: product.quantity - 1
+
+                }
+
+            );
+
+        }
+
+        const response = await productApi.get(
+
+            `/cart/${user.uid}`
 
         );
 
-    };
+        setCart(response.data);
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+    }
+
+};
 
     const clearCart = () => {
 
-    setCart([]);
+        setCart([]);
 
-};
+    };
 
     // Total Price
 
@@ -185,19 +277,19 @@ function CartProvider({ children }) {
 
     const totalMRP = cart.reduce(
 
-    (total, item) =>
+        (total, item) =>
 
-        total + item.regular_price * item.quantity,
+            total + item.regular_price * item.quantity,
 
-    0
+        0
 
-);
+    );
 
-const totalDiscount = totalMRP - totalPrice;
+    const totalDiscount = totalMRP - totalPrice;
 
-const deliveryCharge = totalPrice >= 499 ? 0 : 40;
+    const deliveryCharge = totalPrice >= 499 ? 0 : 40;
 
-const finalAmount = totalPrice + deliveryCharge;
+    const finalAmount = totalPrice + deliveryCharge;
 
     // Total Items
 
@@ -217,30 +309,30 @@ const finalAmount = totalPrice + deliveryCharge;
 
             value={{
 
-    cart,
+                cart,
 
-    addToCart,
+                addToCart,
 
-    removeFromCart,
+                removeFromCart,
 
-    increaseQuantity,
+                increaseQuantity,
 
-    decreaseQuantity,
+                decreaseQuantity,
 
-    totalItems,
+                totalItems,
 
-    totalPrice,
+                totalPrice,
 
-    totalMRP,
+                totalMRP,
 
-    totalDiscount,
+                totalDiscount,
 
-    deliveryCharge,
+                deliveryCharge,
 
-    finalAmount, 
+                finalAmount,
 
-    clearCart
-}}
+                clearCart
+            }}
 
         >
 

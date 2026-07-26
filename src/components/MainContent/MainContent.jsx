@@ -7,7 +7,8 @@ import "swiper/css/pagination";
 import "./MainContent.css";
 
 import ProductCard from "../ProductCard/ProductCard";
-import products from "../../data/products";
+import { useEffect, useState } from "react";
+import productApi from "../../api/productApi";
 
 // Offer Images
 import offer1 from "../../assets/Offer_Banner/special_offer1.jpeg";
@@ -15,6 +16,30 @@ import offer2 from "../../assets/Offer_Banner/special_offer2.png";
 import offer3 from "../../assets/Offer_Banner/special_offer3.png";
 
 function MainContent() {
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+
+    const fetchProducts = async () => {
+
+      try {
+
+        const response = await productApi.get("/products");
+
+        setProducts(response.data);
+
+      } catch (error) {
+
+        console.error(error);
+
+      }
+
+    };
+
+    fetchProducts();
+
+  }, []);
 
   // Only featured products will be displayed on the Home page
   const featuredProducts = products.filter(
@@ -91,13 +116,7 @@ function MainContent() {
 
           <ProductCard
             key={product.id}
-            id={product.id}
-            category={product.category}
-            image={product.image}
-            company={product.company}
-            name={product.name}
-            regular_price={product.regular_price}
-            offer_price={product.offer_price}
+            {...product}
           />
 
         ))}

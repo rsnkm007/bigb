@@ -6,7 +6,8 @@ import { CartContext } from "../../context/CartContext";
 import { AddressContext } from "../../context/AddressContext";
 import API from "../../api/paymentApi";
 import { useNavigate } from "react-router-dom";
-import { OrderContext } from "../../context/OrderContext";
+import orderApi from "../../api/orderApi";
+import { auth } from "../../firebase/firebase";
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -24,7 +25,7 @@ function Payment() {
     finalAmount,
     clearCart
 
-} = useContext(CartContext);
+  } = useContext(CartContext);
 
   const {
 
@@ -40,127 +41,121 @@ function Payment() {
 
   );
 
-  const {
-
-    addOrder
-
-} = useContext(OrderContext);
-
   const navigate = useNavigate();
 
   const handlePayment = async () => {
 
     try {
 
-        const { data: order } = await API.post(
+      const { data: order } = await API.post(
 
-            "/payment/create-order",
+        "/payment/create-order",
 
-            {
+        {
 
-                amount: finalAmount
+          amount: finalAmount
+
+        }
+
+      );
+
+      const options = {
+
+        key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+
+        amount: order.amount,
+
+        currency: order.currency,
+
+        name: "BigB",
+
+        description: "BigB Shopping Payment",
+
+        order_id: order.id,
+
+        prefill: {
+
+          name: address.fullName,
+
+          contact: address.phone,
+
+        },
+
+        theme: {
+
+          color: "#ff3b30"
+
+        },
+
+        handler: async function (response) {
+
+          try {
+
+            const verify = await API.post(
+
+              "/payment/verify",
+
+              response
+
+            );
+
+            if (verify.data.success) {
+
+              const user = auth.currentUser;
+
+              await orderApi.post("/orders", {
+
+                firebase_uid: user.uid,
+
+                address_id: address.id,
+
+                razorpay_order_id: response.razorpay_order_id,
+
+                razorpay_payment_id: response.razorpay_payment_id,
+
+                total_amount: finalAmount,
+
+                cart
+
+              });
+
+              clearCart();
+
+              navigate("/order-success");
 
             }
 
-        );
+            else {
 
-        const options = {
+              alert("Payment Verification Failed");
 
-            key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+            }
 
-            amount: order.amount,
+          }
 
-            currency: order.currency,
+          catch (error) {
 
-            name: "BigB",
+            console.error(error);
 
-            description: "BigB Shopping Payment",
-
-            order_id: order.id,
-
-            prefill: {
-
-                name: address.fullName,
-
-                contact: address.phone,
-
-            },
-
-            theme: {
-
-                color: "#ff3b30"
-
-            },
-
-            handler: async function(response){
-
-    try{
-
-        const verify = await API.post(
-
-            "/payment/verify",
-
-            response
-
-        );
-
-        if(verify.data.success){
-
-            addOrder({
-
-    orderId: response.razorpay_order_id,
-
-    paymentId: response.razorpay_payment_id,
-
-    amount: finalAmount,
-
-    products: [...cart],
-
-    address,
-
-    date: new Date().toLocaleString(),
-
-    status: "Paid"
-
-});
-
-clearCart();
-
-navigate("/order-success");
+          }
 
         }
 
-        else{
+      };
 
-            alert("Payment Verification Failed");
+      const razorpay = new window.Razorpay(options);
 
-        }
-
-    }
-
-    catch(error){
-
-        console.error(error);
-
-    }
-
-}
-
-        };
-
-        const razorpay = new window.Razorpay(options);
-
-        razorpay.open();
+      razorpay.open();
 
     }
 
     catch (error) {
 
-        console.error(error);
+      console.error(error);
 
     }
 
-};
+  };
 
   return (
 

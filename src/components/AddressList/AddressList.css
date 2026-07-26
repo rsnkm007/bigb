@@ -42,7 +42,7 @@
 
 }
 
-.delete-address{
+.delete-address, .edit-address{
 
     margin-top:15px;
 
@@ -58,6 +58,10 @@
 
     cursor:pointer;
 
+}
+
+.edit-address{
+    margin-left: 10px;
 }
 
 .no-address{

@@ -1,6 +1,7 @@
 import "./Login.css";
 
 import shoppingHero from "../../assets/login.jpeg";
+import productApi from "../../api/productApi";
 
 import { auth, provider } from "../../firebase/firebase";
 
@@ -9,43 +10,53 @@ import {
     signInAnonymously
 } from "firebase/auth";
 
+
 function Login({ setLoggedIn }) {
 
     const googleLogin = async () => {
 
-        try {
+    try {
 
-            await signInWithPopup(auth, provider);
+        const result = await signInWithPopup(auth, provider);
 
-            setLoggedIn(true);
+        await productApi.post("/users", {
 
-        }
+    firebase_uid: result.user.uid,
+    name: result.user.displayName,
+    email: result.user.email,
+    profile_image: result.user.photoURL,
+    provider: "google"
 
-        catch (error) {
+});
 
-            console.log(error);
+        setLoggedIn(true);
 
-        }
+    }
 
-    };
+    catch (error) {
 
-    const guestLogin = async () => {
+        console.error(error);
 
-        try {
+    }
 
-            await signInAnonymously(auth);
+};
+const guestLogin = async () => {
 
-            setLoggedIn(true);
+    try {
 
-        }
+        await signInAnonymously(auth);
 
-        catch (error) {
+        setLoggedIn(true);
 
-            console.log(error);
+    }
 
-        }
+    catch (error) {
 
-    };
+        console.log(error);
+
+    }
+
+};
 
     return (
 

@@ -1,10 +1,35 @@
 import "./FeaturedProducts.css";
 
-import products from "../../data/products";
+import { useEffect, useState } from "react";
+import productApi from "../../api/productApi";
 
 import ProductCard from "../ProductCard/ProductCard";
 
 function FeaturedProducts() {
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+
+        const fetchProducts = async () => {
+
+            try {
+
+                const response = await productApi.get("/products");
+
+                setProducts(response.data);
+
+            } catch (error) {
+
+                console.error("Error fetching products:", error);
+
+            }
+
+        };
+
+        fetchProducts();
+
+    }, []);
 
     const featuredProducts = [
 

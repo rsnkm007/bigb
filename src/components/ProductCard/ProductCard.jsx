@@ -3,48 +3,65 @@ import { Link, useNavigate } from "react-router-dom";
 import "./ProductCard.css";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
-import products from "../../data/products";
 
-function ProductCard({
-  id,
-  category,
-  image,
-  company,
-  name,
-  regular_price,
-  offer_price
-}) 
-{
+function ProductCard(props) {
+
+  const {
+    id,
+    category,
+    image,
+    company,
+    name,
+    regular_price,
+    offer_price
+  } = props;
 
   const navigate = useNavigate();
 
-const { addToCart } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
-const handleOrderNow = (e) => {
+  const product = {
+
+    id,
+
+    category,
+
+    image,
+
+    company,
+
+    name,
+
+    regular_price,
+
+    offer_price
+
+  };
+
+
+  const handleOrderNow = (e) => {
 
     e.preventDefault();
 
-    const product = products.find(
-        p => p.id === id && p.category === category
-    );
+    addToCart(product);
 
-    if (product) {
-        addToCart(product);
-        navigate("/cart");
-    }
+    navigate("/cart");
 
-};
+  };
   return (
     <Link
-    to={`/product/${category}/${id}`}
-    className="product-link"
->
+      to={`/product/${category}/${id}`}
+      className="product-link"
+    >
       <div className="product-card">
-
         <img
           src={image}
           alt={name}
           className="special-offers"
+          onError={(e) => {
+            console.log("Image failed:", image);
+            e.target.style.border = "2px solid red";
+          }}
         />
 
         <div className="company-name">
@@ -74,11 +91,11 @@ const handleOrderNow = (e) => {
           </p>
 
           <button
-    className="order-now"
-    onClick={handleOrderNow}
->
-    Order Now
-</button>
+            className="order-now"
+            onClick={handleOrderNow}
+          >
+            Order Now
+          </button>
 
         </div>
 

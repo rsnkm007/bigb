@@ -8,7 +8,8 @@ import sofa7 from "../../assets/Furnitures/sofa7.webp";
 import sofa8 from "../../assets/Furnitures/sofa8.webp";
 import sofa9 from "../../assets/Furnitures/sofa9.webp";
 
-const furniture = [{
+const furniture = [
+  {
     id: 1,
     featured: true,
     category: "Furniture",

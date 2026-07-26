@@ -8,15 +8,17 @@ function AddressList() {
 
     const {
 
-        addresses,
+    addresses,
 
-        selectedAddress,
+    selectedAddress,
 
-        setSelectedAddress,
+    setSelectedAddress,
 
-        deleteAddress
+    deleteAddress,
 
-    } = useContext(AddressContext);
+    setEditingAddressId
+
+} = useContext(AddressContext);
 
     if (addresses.length === 0) {
 
@@ -44,11 +46,10 @@ function AddressList() {
 
                         key={address.id}
 
-                        className={`address-card ${
-                            selectedAddress === address.id
-                                ? "selected"
-                                : ""
-                        }`}
+                        className={`address-card ${selectedAddress === address.id
+                            ? "selected"
+                            : ""
+                            }`}
 
                     >
 
@@ -71,35 +72,20 @@ function AddressList() {
                             <div>
 
                                 <h3>
-
-                                    {address.fullName}
-
+                                    {address.full_name}
                                 </h3>
 
                                 <p>
-
-                                    {address.house}
-
+                                    {address.address_line1}
                                 </p>
 
                                 <p>
-
-                                    {address.city},
-
-                                    {" "}
-
-                                    {address.state}
-
-                                    {" - "}
-
-                                    {address.pincode}
-
+                                    {address.city},{" "}
+                                    {address.state} - {address.postal_code}
                                 </p>
 
                                 <p>
-
                                     {address.phone}
-
                                 </p>
 
                             </div>
@@ -120,6 +106,13 @@ function AddressList() {
 
                             Delete
 
+                        </button>
+
+                        <button
+                            className="edit-address"
+                            onClick={() => setEditingAddressId(address.id)}
+                        >
+                            Edit
                         </button>
 
                     </div>

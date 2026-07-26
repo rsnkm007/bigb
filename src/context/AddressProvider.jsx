@@ -1,5 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AddressContext } from "./AddressContext";
+
+import { auth } from "../firebase/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+
+import productApi from "../api/productApi";
 
 function AddressProvider({ children }) {
 
@@ -7,29 +12,193 @@ function AddressProvider({ children }) {
 
     const [selectedAddress, setSelectedAddress] = useState(null);
 
-    const addAddress = (address) => {
+    const [editingAddressId, setEditingAddressId] = useState(null);
 
-        const newAddress = {
-            id: Date.now(),
-            ...address
-        };
+    const loadAddresses = async () => {
 
-        setAddresses(prev => [...prev, newAddress]);
+        const user = auth.currentUser;
 
-        if (!selectedAddress) {
-            setSelectedAddress(newAddress.id);
+        if (!user || user.isAnonymous) return;
+
+        try {
+
+            const response = await productApi.get(
+                `/address/${user.uid}`
+            );
+
+            setAddresses(response.data);
+
+            const defaultAddress = response.data.find(
+                address => address.is_default
+            );
+
+            if (defaultAddress) {
+
+                setSelectedAddress(defaultAddress.id);
+
+            }
+
+            else if (response.data.length > 0) {
+
+                setSelectedAddress(response.data[0].id);
+
+            }
+
+            else {
+
+                setSelectedAddress(null);
+
+            }
+
+        }
+
+        catch (error) {
+
+            console.error(error);
+
         }
 
     };
 
-    const deleteAddress = (id) => {
+    useEffect(() => {
 
-        setAddresses(prev =>
-            prev.filter(address => address.id !== id)
+        const unsubscribe = onAuthStateChanged(
+
+            auth,
+
+            async (user) => {
+
+                if (!user || user.isAnonymous) {
+
+                    setAddresses([]);
+                    setSelectedAddress(null);
+
+                    return;
+
+                }
+
+                await loadAddresses();
+
+            }
+
         );
 
-        if (selectedAddress === id) {
-            setSelectedAddress(null);
+        return () => unsubscribe();
+
+    }, []);
+
+    const addAddress = async (address) => {
+
+        const user = auth.currentUser;
+
+        if (!user || user.isAnonymous) {
+
+            alert("Please login first.");
+
+            return;
+
+        }
+
+        try {
+
+            await productApi.post("/address", {
+
+                firebase_uid: user.uid,
+
+                full_name: address.fullName,
+
+                phone: address.phone,
+
+                address_line1: address.house,
+
+                address_line2: "",
+
+                city: address.city,
+
+                state: address.state,
+
+                postal_code: address.pincode,
+
+                country: "India",
+
+                is_default: false
+
+            });
+
+            await loadAddresses();
+
+        }
+
+        catch (error) {
+
+            console.error(error);
+
+        }
+
+    };
+
+    const updateAddress = async (id, address) => {
+
+        try {
+
+            await productApi.put(
+
+                `/address/${id}`,
+
+                {
+
+                    full_name: address.fullName,
+
+                    phone: address.phone,
+
+                    address_line1: address.house,
+
+                    address_line2: "",
+
+                    city: address.city,
+
+                    state: address.state,
+
+                    postal_code: address.pincode,
+
+                    country: "India",
+
+                    is_default: false
+
+                }
+
+            );
+
+            await loadAddresses();
+
+        }
+
+        catch (error) {
+
+            console.error(error);
+
+        }
+
+    };
+
+    const deleteAddress = async (id) => {
+
+        try {
+
+            await productApi.delete(
+
+                `/address/${id}`
+
+            );
+
+            await loadAddresses();
+
+        }
+
+        catch (error) {
+
+            console.error(error);
+
         }
 
     };
@@ -37,6 +206,7 @@ function AddressProvider({ children }) {
     return (
 
         <AddressContext.Provider
+
             value={{
 
                 addresses,
@@ -45,11 +215,20 @@ function AddressProvider({ children }) {
 
                 setSelectedAddress,
 
+                editingAddressId,
+
+                setEditingAddressId,
+
                 addAddress,
 
-                deleteAddress
+                updateAddress,
 
+                deleteAddress,
+
+                loadAddresses, 
+                
             }}
+
         >
 
             {children}

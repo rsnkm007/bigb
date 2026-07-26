@@ -5,7 +5,25 @@ import { AddressContext } from "../../context/AddressContext";
 
 function AddressForm() {
 
-    const { addAddress } = useContext(AddressContext);
+    const {
+
+        addresses,
+
+        addAddress,
+
+        updateAddress,
+
+        editingAddressId,
+
+        setEditingAddressId
+
+    } = useContext(AddressContext);
+
+    const editingAddress = addresses.find(
+
+        address => address.id === editingAddressId
+
+    );
 
     const [form, setForm] = useState({
 
@@ -20,6 +38,12 @@ function AddressForm() {
 
     const handleChange = (e) => {
 
+        if (editingAddress) {
+
+            setEditingAddressId(null);
+
+        }
+
         setForm({
 
             ...form,
@@ -30,11 +54,60 @@ function AddressForm() {
 
     };
 
-    const handleSubmit = (e) => {
+    const handleEdit = () => {
+
+        if (!editingAddress) return;
+
+        setForm({
+
+            fullName: editingAddress.full_name,
+
+            phone: editingAddress.phone,
+
+            house: editingAddress.address_line1,
+
+            city: editingAddress.city,
+
+            state: editingAddress.state,
+
+            pincode: editingAddress.postal_code
+
+        });
+
+    };
+
+    if (
+        editingAddress &&
+        form.fullName === ""
+    ) {
+
+        handleEdit();
+
+    }
+
+    const handleSubmit = async (e) => {
 
         e.preventDefault();
 
-        addAddress(form);
+        if (editingAddress) {
+
+            await updateAddress(
+
+                editingAddress.id,
+
+                form
+
+            );
+
+            setEditingAddressId(null);
+
+        }
+
+        else {
+
+            await addAddress(form);
+
+        }
 
         setForm({
 
@@ -106,7 +179,15 @@ function AddressForm() {
 
             <button type="submit">
 
-                Save Address
+                {
+
+                    editingAddress
+
+                        ? "Update Address"
+
+                        : "Save Address"
+
+                }
 
             </button>
 

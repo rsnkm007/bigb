@@ -1,21 +1,73 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { OrderContext } from "./OrderContext";
+
+import { auth } from "../firebase/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+
+import orderApi from "../api/orderApi";
 
 function OrderProvider({ children }) {
 
     const [orders, setOrders] = useState([]);
 
-    const addOrder = (order) => {
+    const loadOrders = useCallback(async () => {
 
-        setOrders(previous => [
+    const user = auth.currentUser;
 
-            order,
+    if (!user || user.isAnonymous) {
 
-            ...previous
+        setOrders([]);
 
-        ]);
+        return;
 
-    };
+    }
+
+    try {
+
+        const response = await orderApi.get(
+
+            `/orders/${user.uid}`
+
+        );
+
+        setOrders(response.data);
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+    }
+
+}, []);
+    
+
+    useEffect(() => {
+
+        const unsubscribe = onAuthStateChanged(
+
+            auth,
+
+            async (user) => {
+
+                if (!user || user.isAnonymous) {
+
+                    setOrders([]);
+
+                    return;
+
+                }
+
+                await loadOrders();
+
+            }
+
+        );
+
+        return () => unsubscribe();
+
+    }, []);
 
     return (
 
@@ -25,7 +77,7 @@ function OrderProvider({ children }) {
 
                 orders,
 
-                addOrder
+                loadOrders
 
             }}
 

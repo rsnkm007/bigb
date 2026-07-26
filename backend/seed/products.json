@@ -1,0 +1,1782 @@
+[
+  {
+    "featured": false,
+    "category": "Air Conditioners",
+    "company": "Voltas",
+    "name": "Voltas 1.5 Ton 5 Star Inverter AC",
+    "description": "1.5 Ton | 5 Star | Inverter Compressor | Copper Condenser | Turbo Cooling",
+    "regular_price": 46990,
+    "offer_price": 41990,
+    "image": "/assets/Electronics/AC/ac1.webp"
+  },
+  {
+    "featured": false,
+    "category": "Air Conditioners",
+    "company": "Lloyd",
+    "name": "Lloyd Bespoke AI Split AC",
+    "description": "1.5 Ton | 5 Star | AI Smart Cooling | Copper Condenser | Wi-Fi Ready",
+    "regular_price": 48990,
+    "offer_price": 43990,
+    "image": "/assets/Electronics/AC/ac2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Air Conditioners",
+    "company": "Panasonic",
+    "name": "Panasonic Wi-Fi Inverter AC",
+    "description": "1.5 Ton | 3 Star | Wi-Fi | AI Mode | PM 0.1 Filter | Copper",
+    "regular_price": 45990,
+    "offer_price": 40990,
+    "image": "/assets/Electronics/AC/ac3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Air Conditioners",
+    "company": "LG",
+    "name": "LG Dual Inverter Split AC",
+    "description": "1.5 Ton | 5 Star | Dual Inverter | HD Filter | Ocean Black Protection",
+    "regular_price": 52990,
+    "offer_price": 47990,
+    "image": "/assets/Electronics/AC/ac4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Air Conditioners",
+    "company": "Blue Star",
+    "name": "Blue Star Inverter Split AC",
+    "description": "1.5 Ton | 3 Star | Convertible 5-in-1 Cooling | Copper Condenser",
+    "regular_price": 43990,
+    "offer_price": 38990,
+    "image": "/assets/Electronics/AC/ac5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Air Conditioners",
+    "company": "Carrier",
+    "name": "Carrier XCEL Lumo Inverter AC",
+    "description": "1.5 Ton | 5 Star | FlexiCool | PM 2.5 Filter | Copper Condenser",
+    "regular_price": 49990,
+    "offer_price": 44990,
+    "image": "/assets/Electronics/AC/ac6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Air Conditioners",
+    "company": "Haier",
+    "name": "Haier Frost Self Clean AC",
+    "description": "1.5 Ton | 5 Star | Self Clean | Turbo Mode | Triple Inverter",
+    "regular_price": 47990,
+    "offer_price": 42990,
+    "image": "/assets/Electronics/AC/ac7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Air Conditioners",
+    "company": "Samsung",
+    "name": "Samsung WindFree Inverter AC",
+    "description": "1.5 Ton | 5 Star | WindFree Cooling | AI Auto Cooling | Copper",
+    "regular_price": 54990,
+    "offer_price": 49990,
+    "image": "/assets/Electronics/AC/ac8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Air Conditioners",
+    "company": "Hisense",
+    "name": "Hisense 5-in-1 Convertible AC",
+    "description": "1.5 Ton | 3 Star | Convertible Cooling | Self Clean | Copper Condenser",
+    "regular_price": 42990,
+    "offer_price": 37990,
+    "image": "/assets/Electronics/AC/ac9.webp"
+  },
+  {
+    "featured": false,
+    "category": "Bags",
+    "company": "American Tourister",
+    "name": "Casual Laptop Backpack",
+    "description": "32L Capacity | Water Resistant | 15.6-inch Laptop Compartment | Lightweight",
+    "regular_price": 2999,
+    "offer_price": 2199,
+    "image": "/assets/Travel/Bags/bag1.webp"
+  },
+  {
+    "featured": false,
+    "category": "Bags",
+    "company": "Wildcraft",
+    "name": "Trekking Backpack",
+    "description": "45L Hiking Backpack | Rain Cover Included | Multiple Compartments",
+    "regular_price": 3999,
+    "offer_price": 3199,
+    "image": "/assets/Travel/Bags/bag2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Bags",
+    "company": "Arctic Fox",
+    "name": "Minimal Travel Backpack",
+    "description": "20L Casual Backpack | Water Resistant | Everyday Office & College Use",
+    "regular_price": 2499,
+    "offer_price": 1799,
+    "image": "/assets/Travel/Bags/bag3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Bags",
+    "company": "Provogue",
+    "name": "School Backpack",
+    "description": "25L Lightweight Backpack | Durable Fabric | Comfortable Shoulder Straps",
+    "regular_price": 1999,
+    "offer_price": 1499,
+    "image": "/assets/Travel/Bags/bag4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Bags",
+    "company": "Roadman",
+    "name": "Laptop Backpack",
+    "description": "USB Charging Port | Bottle Holder | 15.6-inch Laptop Compatible",
+    "regular_price": 2499,
+    "offer_price": 1899,
+    "image": "/assets/Travel/Bags/bag5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Bags",
+    "company": "Divulge",
+    "name": "College Backpack",
+    "description": "Spacious Main Compartment | Stylish Design | Daily College & Office Use",
+    "regular_price": 1799,
+    "offer_price": 1299,
+    "image": "/assets/Travel/Bags/bag6.webp"
+  },
+  {
+    "featured": true,
+    "category": "Bags",
+    "company": "Skybags",
+    "name": "Premium Casual Backpack",
+    "description": "Anti-Theft Design | Water Resistant | Padded Laptop Sleeve",
+    "regular_price": 3299,
+    "offer_price": 2599,
+    "image": "/assets/Travel/Bags/bag7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Bags",
+    "company": "Right Choice",
+    "name": "Travel Duffel Backpack",
+    "description": "Large Capacity | Multipurpose Travel Bag | Durable Polyester Material",
+    "regular_price": 2899,
+    "offer_price": 2199,
+    "image": "/assets/Travel/Bags/bag8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Beauty",
+    "company": "Generic",
+    "name": "360° Makeup Organizer",
+    "description": "Rotating Cosmetic Organizer | Makeup Brush Holder | Skincare Storage",
+    "regular_price": 1999,
+    "offer_price": 1499,
+    "image": "/assets/Beauty/beauty1.webp"
+  },
+  {
+    "featured": false,
+    "category": "Beauty",
+    "company": "Swiss Beauty",
+    "name": "Professional Makeup Kit",
+    "description": "Foundation | Compact | Lipsticks | Eyeshadow | Complete Makeup Set",
+    "regular_price": 2999,
+    "offer_price": 2199,
+    "image": "/assets/Beauty/beauty2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Beauty",
+    "company": "Insight Cosmetics",
+    "name": "Beauty Essentials Combo",
+    "description": "BB Cream | Primer | Compact | Makeup Setting Spray",
+    "regular_price": 1899,
+    "offer_price": 1399,
+    "image": "/assets/Beauty/beauty3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Beauty",
+    "company": "The Derma Co",
+    "name": "2% Salicylic Acid Face Wash",
+    "description": "Acne Control | Oil-Free Formula | Deep Cleansing | 100ml",
+    "regular_price": 399,
+    "offer_price": 299,
+    "image": "/assets/Beauty/beauty4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Beauty",
+    "company": "Hyphen",
+    "name": "Skin Shield Cream",
+    "description": "SPF 50 PA++++ | Moisturizing Sunscreen | Daily Protection",
+    "regular_price": 699,
+    "offer_price": 549,
+    "image": "/assets/Beauty/beauty5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Beauty",
+    "company": "Ghar Soaps",
+    "name": "Magic Bar Soap",
+    "description": "Natural Handmade Soap | Tan Removal | Skin Brightening",
+    "regular_price": 299,
+    "offer_price": 199,
+    "image": "/assets/Beauty/beauty6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Beauty",
+    "company": "Swiss Beauty",
+    "name": "Complete Makeup Gift Kit",
+    "description": "Eyeshadow Palette | Foundation | Lipsticks | Makeup Brushes",
+    "regular_price": 3499,
+    "offer_price": 2699,
+    "image": "/assets/Beauty/beauty7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Beauty",
+    "company": "Blue Heaven",
+    "name": "Waterproof Makeup Combo",
+    "description": "Liquid Lipstick | Kajal | Eyeliner | Lip Liner Gift Set",
+    "regular_price": 999,
+    "offer_price": 749,
+    "image": "/assets/Beauty/beauty8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Beauty",
+    "company": "Mars Cosmetics",
+    "name": "Matte Lipstick Gift Box",
+    "description": "Set of 3 Long Lasting Matte Lipsticks | Smudge Proof",
+    "regular_price": 899,
+    "offer_price": 649,
+    "image": "/assets/Beauty/beauty9.webp"
+  },
+  {
+    "featured": false,
+    "category": "Books",
+    "company": "Yogesh Sy",
+    "name": "The Final Experiment",
+    "description": "Science Fiction Novel | Mystery Thriller | Paperback Edition",
+    "regular_price": 499,
+    "offer_price": 399,
+    "image": "/assets/Books/book1.webp"
+  },
+  {
+    "featured": false,
+    "category": "Books",
+    "company": "Robin Sharma",
+    "name": "The Monk Who Sold His Ferrari",
+    "description": "Self Help | Personal Growth | International Bestseller",
+    "regular_price": 399,
+    "offer_price": 299,
+    "image": "/assets/Books/book2.jpg"
+  },
+  {
+    "featured": false,
+    "category": "Books",
+    "company": "Robin Sharma",
+    "name": "The 5 AM Club",
+    "description": "Productivity | Leadership | Morning Success Habits",
+    "regular_price": 499,
+    "offer_price": 379,
+    "image": "/assets/Books/book3.jpg"
+  },
+  {
+    "featured": false,
+    "category": "Books",
+    "company": "Robin Sharma",
+    "name": "Who Will Cry When You Die?",
+    "description": "Life Lessons | Self Improvement | Inspirational Book",
+    "regular_price": 399,
+    "offer_price": 299,
+    "image": "/assets/Books/book4.jpg"
+  },
+  {
+    "featured": false,
+    "category": "Books",
+    "company": "Dr. Joseph Murphy",
+    "name": "The Power of Your Subconscious Mind",
+    "description": "Motivation | Psychology | Personal Development",
+    "regular_price": 350,
+    "offer_price": 249,
+    "image": "/assets/Books/book5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Books",
+    "company": "Dale Carnegie",
+    "name": "How to Win Friends and Influence People",
+    "description": "Communication Skills | Leadership | Bestseller",
+    "regular_price": 450,
+    "offer_price": 329,
+    "image": "/assets/Books/book6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Books",
+    "company": "George Matthew Adams",
+    "name": "You Can",
+    "description": "Motivational Book | Success Mindset | Self Help",
+    "regular_price": 299,
+    "offer_price": 199,
+    "image": "/assets/Books/book7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Books",
+    "company": "Homer",
+    "name": "The Best of Homer",
+    "description": "Classic Literature | Iliad & Odyssey Collection",
+    "regular_price": 699,
+    "offer_price": 549,
+    "image": "/assets/Books/book8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Books",
+    "company": "Morgan Housel",
+    "name": "The Psychology of Money",
+    "description": "Finance | Wealth | Investing | Bestseller",
+    "regular_price": 499,
+    "offer_price": 349,
+    "image": "/assets/Books/book9.webp"
+  },
+  {
+    "featured": true,
+    "category": "Casuals",
+    "company": "Allen Solly",
+    "name": "Men's Polo T-Shirt",
+    "description": "100% Cotton | Regular Fit | Half Sleeve | Soft & Breathable Fabric",
+    "regular_price": 1499,
+    "offer_price": 999,
+    "image": "/assets/Shirts/shirt-1.webp"
+  },
+  {
+    "featured": false,
+    "category": "Casuals",
+    "company": "Biba",
+    "name": "Floral Printed Maxi Dress",
+    "description": "Rayon Fabric | Floral Print | Sleeveless | Summer Wear",
+    "regular_price": 2499,
+    "offer_price": 1899,
+    "image": "/assets/Shirts/shirt-2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Casuals",
+    "company": "U.S. Polo Assn.",
+    "name": "Men's Slim Fit Chinos",
+    "description": "Cotton Stretch | Slim Fit | Casual Wear | Comfortable Fabric",
+    "regular_price": 1999,
+    "offer_price": 1499,
+    "image": "/assets/Shirts/shirt-3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Casuals",
+    "company": "H&M",
+    "name": "Unisex Hoodie",
+    "description": "Premium Cotton Blend | Kangaroo Pocket | Full Sleeve | Winter Wear",
+    "regular_price": 2299,
+    "offer_price": 1699,
+    "image": "/assets/Shirts/shirt-4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Casuals",
+    "company": "Roadster",
+    "name": "Striped Casual Shirt",
+    "description": "Cotton Blend | Relaxed Fit | Half Sleeve | Everyday Comfort",
+    "regular_price": 1599,
+    "offer_price": 1099,
+    "image": "/assets/Shirts/shirt-5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Casuals",
+    "company": "Puma",
+    "name": "Men's Crew Neck T-Shirt Pack",
+    "description": "Pack of 3 | Pure Cotton | Regular Fit | Casual Everyday Wear",
+    "regular_price": 1999,
+    "offer_price": 1499,
+    "image": "/assets/Shirts/shirt-6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Casuals",
+    "company": "ONLY",
+    "name": "Women's Color Block Top",
+    "description": "Soft Cotton Blend | Full Sleeve | Slim Fit | Casual Fashion",
+    "regular_price": 1399,
+    "offer_price": 999,
+    "image": "/assets/Shirts/shirt-7.webp"
+  },
+  {
+    "featured": true,
+    "category": "Casuals",
+    "company": "Campus Sutra",
+    "name": "Graphic Printed T-Shirt",
+    "description": "100% Cotton | Round Neck | Relaxed Fit | Printed Design",
+    "regular_price": 999,
+    "offer_price": 699,
+    "image": "/assets/Shirts/shirt-8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Casuals",
+    "company": "Levi's",
+    "name": "Women's Oversized T-Shirt",
+    "description": "Premium Cotton | Oversized Fit | Casual Everyday Wear",
+    "regular_price": 1499,
+    "offer_price": 1099,
+    "image": "/assets/Shirts/shirt-9.webp"
+  },
+  {
+    "featured": false,
+    "category": "Refrigerators",
+    "company": "Samsung",
+    "name": "Samsung Double Door Refrigerator",
+    "description": "324L Capacity | Digital Inverter Compressor | Frost Free | Convertible 5-in-1",
+    "regular_price": 42999,
+    "offer_price": 38999,
+    "image": "/assets/Electronics/Fridge/Fridge1.webp"
+  },
+  {
+    "featured": false,
+    "category": "Refrigerators",
+    "company": "LG",
+    "name": "LG Smart Inverter Refrigerator",
+    "description": "340L Capacity | Frost Free | Smart Inverter Compressor | Multi Air Flow",
+    "regular_price": 45999,
+    "offer_price": 41499,
+    "image": "/assets/Electronics/Fridge/Fridge2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Refrigerators",
+    "company": "Whirlpool",
+    "name": "Whirlpool IntelliFresh Refrigerator",
+    "description": "265L Capacity | 3-Star Rating | Convertible Freezer | IntelliSense Technology",
+    "regular_price": 36999,
+    "offer_price": 33499,
+    "image": "/assets/Electronics/Fridge/Fridge3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Refrigerators",
+    "company": "Haier",
+    "name": "Haier Bottom Mount Refrigerator",
+    "description": "320L Capacity | Bottom Freezer | Twin Inverter Technology | Frost Free",
+    "regular_price": 47999,
+    "offer_price": 43999,
+    "image": "/assets/Electronics/Fridge/Fridge4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Refrigerators",
+    "company": "Godrej",
+    "name": "Godrej Eon Refrigerator",
+    "description": "244L Capacity | Frost Free | Intelligent Inverter | Nano Shield Technology",
+    "regular_price": 32999,
+    "offer_price": 29499,
+    "image": "/assets/Electronics/Fridge/Fridge5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Refrigerators",
+    "company": "Panasonic",
+    "name": "Panasonic Prime Convertible Refrigerator",
+    "description": "307L Capacity | AG Clean Technology | Jumbo Vegetable Basket | Frost Free",
+    "regular_price": 39999,
+    "offer_price": 35999,
+    "image": "/assets/Electronics/Fridge/Fridge6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Refrigerators",
+    "company": "Bosch",
+    "name": "Bosch VitaFresh Refrigerator",
+    "description": "327L Capacity | VitaFresh Technology | Multi Airflow System | Frost Free",
+    "regular_price": 55999,
+    "offer_price": 51999,
+    "image": "/assets/Electronics/Fridge/Fridge7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Refrigerators",
+    "company": "Hitachi",
+    "name": "Hitachi French Door Refrigerator",
+    "description": "525L Capacity | Inverter Compressor | Dual Fan Cooling | Touch Control Panel",
+    "regular_price": 89999,
+    "offer_price": 82999,
+    "image": "/assets/Electronics/Fridge/Fridge8.webp"
+  },
+  {
+    "featured": true,
+    "category": "Furniture",
+    "company": "Home Decor",
+    "name": "Luxury Sofa",
+    "description": "Premium Fabric Sofa | 3 Seater | High Density Foam",
+    "regular_price": 30000,
+    "offer_price": 24999,
+    "image": "/assets/Furnitures/sofa1.jpg"
+  },
+  {
+    "featured": false,
+    "category": "Furniture",
+    "company": "Home Decor",
+    "name": "Luxury Sofa",
+    "description": "Premium Fabric Sofa | 3 Seater | High Density Foam",
+    "regular_price": 30000,
+    "offer_price": 24999,
+    "image": "/assets/Furnitures/sofa2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Furniture",
+    "company": "Home Decor",
+    "name": "Luxury Sofa",
+    "description": "Premium Fabric Sofa | 3 Seater | High Density Foam",
+    "regular_price": 30000,
+    "offer_price": 24999,
+    "image": "/assets/Furnitures/sofa3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Furniture",
+    "company": "Home Decor",
+    "name": "Luxury Sofa",
+    "description": "Premium Fabric Sofa | 3 Seater | High Density Foam",
+    "regular_price": 30000,
+    "offer_price": 24999,
+    "image": "/assets/Furnitures/sofa4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Furniture",
+    "company": "Home Decor",
+    "name": "Luxury Sofa",
+    "description": "Premium Fabric Sofa | 3 Seater | High Density Foam",
+    "regular_price": 30000,
+    "offer_price": 24999,
+    "image": "/assets/Furnitures/sofa5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Furniture",
+    "company": "Home Decor",
+    "name": "Luxury Sofa",
+    "description": "Premium Fabric Sofa | 3 Seater | High Density Foam",
+    "regular_price": 30000,
+    "offer_price": 24999,
+    "image": "/assets/Furnitures/sofa6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Furniture",
+    "company": "Home Decor",
+    "name": "Luxury Sofa",
+    "description": "Premium Fabric Sofa | 3 Seater | High Density Foam",
+    "regular_price": 30000,
+    "offer_price": 24999,
+    "image": "/assets/Furnitures/sofa7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Furniture",
+    "company": "Home Decor",
+    "name": "Luxury Sofa",
+    "description": "Premium Fabric Sofa | 3 Seater | High Density Foam",
+    "regular_price": 30000,
+    "offer_price": 24999,
+    "image": "/assets/Furnitures/sofa8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Furniture",
+    "company": "Home Decor",
+    "name": "Luxury Sofa",
+    "description": "Premium Fabric Sofa | 3 Seater | High Density Foam",
+    "regular_price": 30000,
+    "offer_price": 24999,
+    "image": "/assets/Furnitures/sofa9.webp"
+  },
+  {
+    "featured": false,
+    "category": "Gaming",
+    "company": "GameBox",
+    "name": "Game Stick 4K Console",
+    "description": "4K HDMI Output | 20,000+ Retro Games | Dual Wireless Controllers | Plug & Play",
+    "regular_price": 4999,
+    "offer_price": 3499,
+    "image": "/assets/Electronics/Gaming/game1.webp"
+  },
+  {
+    "featured": false,
+    "category": "Gaming",
+    "company": "Cosmic Byte",
+    "name": "Cosmic Byte Ares Wireless Controller",
+    "description": "Bluetooth + USB | RGB Lighting | Mobile & PC Compatible | Rechargeable",
+    "regular_price": 2999,
+    "offer_price": 2299,
+    "image": "/assets/Electronics/Gaming/game2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Gaming",
+    "company": "Redgear",
+    "name": "Redgear Pro Wireless Gamepad",
+    "description": "Wireless Controller | Dual Vibration | Android, PC & Smart TV Compatible",
+    "regular_price": 2499,
+    "offer_price": 1899,
+    "image": "/assets/Electronics/Gaming/game3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Gaming",
+    "company": "SpinBot",
+    "name": "SpinBot Mobile Gaming Triggers",
+    "description": "PUBG & BGMI Gaming Triggers | Cooling Fan | Mobile Game Controller",
+    "regular_price": 1999,
+    "offer_price": 1499,
+    "image": "/assets/Electronics/Gaming/game4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Gaming",
+    "company": "GameSir",
+    "name": "GameSir X2 Mobile Controller",
+    "description": "USB-C Mobile Controller | Android Compatible | Low Latency Gaming",
+    "regular_price": 6999,
+    "offer_price": 5999,
+    "image": "/assets/Electronics/Gaming/game5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Gaming",
+    "company": "EvoFox",
+    "name": "EvoFox Elite X Wireless Controller",
+    "description": "PC & Android Controller | Dual Motors | Rechargeable Battery",
+    "regular_price": 3499,
+    "offer_price": 2799,
+    "image": "/assets/Electronics/Gaming/game6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Gaming",
+    "company": "Sony",
+    "name": "DualShock Style Wireless Controller",
+    "description": "Bluetooth Controller | Mobile, PC & Smart TV Compatible | Dual Analog",
+    "regular_price": 2999,
+    "offer_price": 2399,
+    "image": "/assets/Electronics/Gaming/game7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Gaming",
+    "company": "Anbernic",
+    "name": "Retro Handheld Gaming Console",
+    "description": "3.5-inch IPS Display | 64GB Storage | Retro Games | Rechargeable Battery",
+    "regular_price": 8999,
+    "offer_price": 7499,
+    "image": "/assets/Electronics/Gaming/game8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Gaming",
+    "company": "Rockstar Games",
+    "name": "Grand Theft Auto V (PC)",
+    "description": "Open World Action Game | Story Mode | GTA Online | Digital Edition",
+    "regular_price": 2499,
+    "offer_price": 1799,
+    "image": "/assets/Electronics/Gaming/game9.webp"
+  },
+  {
+    "featured": false,
+    "category": "Groceries",
+    "company": "Grosso",
+    "name": "Premium Toor Dal",
+    "description": "1kg Premium Toor Dal | High Protein | Unpolished Pulses",
+    "regular_price": 299,
+    "offer_price": 229,
+    "image": "/assets/Groceries/Packed/gro1.webp"
+  },
+  {
+    "featured": false,
+    "category": "Groceries",
+    "company": "Aashirvaad",
+    "name": "Iodized Crystal Salt",
+    "description": "1kg Iodized Salt | Rich in Iodine | Everyday Essential",
+    "regular_price": 40,
+    "offer_price": 32,
+    "image": "/assets/Groceries/Packed/gro2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Groceries",
+    "company": "Fortune",
+    "name": "Sunlite Refined Oil",
+    "description": "1L Refined Sunflower Oil | Low Absorb Technology",
+    "regular_price": 220,
+    "offer_price": 189,
+    "image": "/assets/Groceries/Packed/gro3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Groceries",
+    "company": "Surf Excel",
+    "name": "Matic Detergent Powder",
+    "description": "Front Load Washing Machine Detergent | 5kg Value Pack",
+    "regular_price": 799,
+    "offer_price": 699,
+    "image": "/assets/Groceries/Packed/gro4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Groceries",
+    "company": "Sensodyne",
+    "name": "Expert White Toothpaste",
+    "description": "Pack of 2 | Sensitive Teeth Protection | Whitening Formula",
+    "regular_price": 440,
+    "offer_price": 369,
+    "image": "/assets/Groceries/Packed/gro5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Groceries",
+    "company": "Fresh Farm",
+    "name": "Fresh Red Onions",
+    "description": "Farm Fresh Premium Red Onions | 1kg",
+    "regular_price": 70,
+    "offer_price": 55,
+    "image": "/assets/Groceries/Packed/gro6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Groceries",
+    "company": "India Gate",
+    "name": "Everyday Basmati Rice",
+    "description": "5kg Premium Basmati Rice | Long Grain | Aromatic",
+    "regular_price": 799,
+    "offer_price": 679,
+    "image": "/assets/Groceries/Packed/gro7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Groceries",
+    "company": "Aashirvaad",
+    "name": "Himalayan Pink Salt",
+    "description": "Natural Rock Salt | Rich Minerals | 1kg Pack",
+    "regular_price": 120,
+    "offer_price": 95,
+    "image": "/assets/Groceries/Packed/gro8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Kitchen Appliances",
+    "company": "Philips",
+    "name": "Philips Digital Air Fryer",
+    "description": "6.2L Capacity | Rapid Air Technology | Touch Control | 1700W",
+    "regular_price": 12995,
+    "offer_price": 9999,
+    "image": "/assets/Electronics/Kitchen Appliances/KA1.webp"
+  },
+  {
+    "featured": true,
+    "category": "Kitchen Appliances",
+    "company": "NutriPro",
+    "name": "NutriPro Mixer Grinder",
+    "description": "500W Motor | 3 Jars | Multipurpose Blender | Stainless Steel Blades",
+    "regular_price": 3499,
+    "offer_price": 2499,
+    "image": "/assets/Electronics/Kitchen Appliances/ka3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Kitchen Appliances",
+    "company": "Prestige",
+    "name": "Prestige Mixer Grinder",
+    "description": "750W Motor | 3 Stainless Steel Jars | Overload Protection",
+    "regular_price": 4995,
+    "offer_price": 3899,
+    "image": "/assets/Electronics/Kitchen Appliances/ka4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Kitchen Appliances",
+    "company": "Pigeon",
+    "name": "Pigeon Stainless Steel Coffee Maker",
+    "description": "600ml Capacity | Stainless Steel Body | Ergonomic Handle",
+    "regular_price": 1999,
+    "offer_price": 1499,
+    "image": "/assets/Electronics/Kitchen Appliances/ka5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Kitchen Appliances",
+    "company": "Bosch",
+    "name": "Bosch Food Processor",
+    "description": "1000W Motor | Multi-function Processor | 4 Jars | Dough Kneading",
+    "regular_price": 11999,
+    "offer_price": 9999,
+    "image": "/assets/Electronics/Kitchen Appliances/ka6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Kitchen Appliances",
+    "company": "Agaro",
+    "name": "AGARO Digital Air Fryer",
+    "description": "4.5L Capacity | LED Touch Panel | Oil-Free Cooking | 1400W",
+    "regular_price": 7999,
+    "offer_price": 5999,
+    "image": "/assets/Electronics/Kitchen Appliances/ka7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Kitchen Appliances",
+    "company": "Bell",
+    "name": "Bell Digital Air Fryer Oven",
+    "description": "12L Capacity | 10 Preset Menus | Rotisserie | Touch Display",
+    "regular_price": 10999,
+    "offer_price": 8799,
+    "image": "/assets/Electronics/Kitchen Appliances/ka8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Kitchen Appliances",
+    "company": "Prestige",
+    "name": "Prestige Induction Cooktop",
+    "description": "2000W | Automatic Voltage Regulator | Touch Panel | Indian Menu",
+    "regular_price": 3999,
+    "offer_price": 2999,
+    "image": "/assets/Electronics/Kitchen Appliances/ka9.webp"
+  },
+  {
+    "featured": false,
+    "category": "Kitchen Appliances",
+    "company": "Inalsa",
+    "name": "Inalsa Electric Chopper",
+    "description": "400W Motor | 2L Stainless Steel Bowl | Multipurpose Vegetable Chopper",
+    "regular_price": 2999,
+    "offer_price": 2199,
+    "image": "/assets/Electronics/Kitchen Appliances/ka1.webp"
+  },
+  {
+    "featured": true,
+    "category": "Laptops",
+    "company": "Lenovo",
+    "name": "Lenovo IdeaPad Slim 3",
+    "description": "Intel Core i5 13th Gen | 16GB RAM | 512GB SSD | 15.6-inch FHD | Windows 11",
+    "regular_price": 62999,
+    "offer_price": 58999,
+    "image": "/assets/Electronics/Laptop/laptop1.webp"
+  },
+  {
+    "featured": false,
+    "category": "Laptops",
+    "company": "ASUS",
+    "name": "ASUS Chromebook CX14",
+    "description": "Intel Celeron N4500 | 8GB RAM | 128GB eMMC | ChromeOS | 14-inch FHD",
+    "regular_price": 32999,
+    "offer_price": 28999,
+    "image": "/assets/Electronics/Laptop/laptop2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Laptops",
+    "company": "Acer",
+    "name": "Acer Aspire Lite",
+    "description": "Intel Core i5 13th Gen | 16GB RAM | 512GB SSD | Windows 11",
+    "regular_price": 57999,
+    "offer_price": 53999,
+    "image": "/assets/Electronics/Laptop/laptop3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Laptops",
+    "company": "ASUS",
+    "name": "ASUS ExpertBook B1",
+    "description": "Intel Core i5 | 16GB RAM | 512GB SSD | Business Laptop | Windows 11 Pro",
+    "regular_price": 69999,
+    "offer_price": 64999,
+    "image": "/assets/Electronics/Laptop/laptop4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Laptops",
+    "company": "Acer",
+    "name": "Acer Aspire 3",
+    "description": "AMD Ryzen 5 | 16GB RAM | 512GB SSD | Full HD Display",
+    "regular_price": 49999,
+    "offer_price": 45999,
+    "image": "/assets/Electronics/Laptop/laptop5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Laptops",
+    "company": "Lenovo",
+    "name": "Lenovo IdeaPad Slim 5",
+    "description": "Intel Core i5 13th Gen | 16GB RAM | 512GB SSD | Office Home & Student",
+    "regular_price": 67999,
+    "offer_price": 61999,
+    "image": "/assets/Electronics/Laptop/laptop6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Laptops",
+    "company": "ASUS",
+    "name": "ASUS Vivobook Go 15",
+    "description": "AMD Ryzen 5 | 16GB RAM | 512GB SSD | 15.6-inch FHD | Windows 11",
+    "regular_price": 54999,
+    "offer_price": 50999,
+    "image": "/assets/Electronics/Laptop/laptop7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Laptops",
+    "company": "ASUS",
+    "name": "ASUS ROG Zephyrus G14",
+    "description": "AMD Ryzen 9 | RTX 4060 | 16GB RAM | 1TB SSD | 14-inch 165Hz Display",
+    "regular_price": 169999,
+    "offer_price": 159999,
+    "image": "/assets/Electronics/Laptop/laptop8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Micro Oven",
+    "company": "LG",
+    "name": "LG NeoChef Convection Microwave",
+    "description": "28L Capacity | Smart Inverter | Convection | Auto Cook Menu | Stainless Steel",
+    "regular_price": 18999,
+    "offer_price": 16999,
+    "image": "/assets/Electronics/Microwave/micro1.jpeg"
+  },
+  {
+    "featured": false,
+    "category": "Micro Oven",
+    "company": "Morphy Richards",
+    "name": "Morphy Richards OTG 42 RCSS",
+    "description": "42L OTG | Rotisserie | Convection | Temperature Control | Motorized Rotisserie",
+    "regular_price": 12999,
+    "offer_price": 10999,
+    "image": "/assets/Electronics/Microwave/micro2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Micro Oven",
+    "company": "IFB",
+    "name": "IFB Convection Microwave 30SC4",
+    "description": "30L Capacity | Rotisserie | Auto Cook Programs | Multi Stage Cooking",
+    "regular_price": 22999,
+    "offer_price": 19999,
+    "image": "/assets/Electronics/Microwave/micro3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Micro Oven",
+    "company": "Kutchina",
+    "name": "Kutchina Convection Oven",
+    "description": "32L Capacity | Convection | Grill | Bake | Auto Menu",
+    "regular_price": 17999,
+    "offer_price": 15499,
+    "image": "/assets/Electronics/Microwave/micro4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Micro Oven",
+    "company": "AGARO",
+    "name": "AGARO Marvel OTG",
+    "description": "19L Oven Toaster Grill | Adjustable Temperature | Timer | Rotisserie",
+    "regular_price": 6999,
+    "offer_price": 5499,
+    "image": "/assets/Electronics/Microwave/micro5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Micro Oven",
+    "company": "Bajaj",
+    "name": "Bajaj Majesty OTG",
+    "description": "16L Capacity | Bake | Toast | Grill | Adjustable Temperature",
+    "regular_price": 5999,
+    "offer_price": 4799,
+    "image": "/assets/Electronics/Microwave/micro6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Micro Oven",
+    "company": "Godrej",
+    "name": "Godrej Solo Microwave",
+    "description": "20L Capacity | 5 Power Levels | Defrost Function | Compact Design",
+    "regular_price": 8999,
+    "offer_price": 7499,
+    "image": "/assets/Electronics/Microwave/micro7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Micro Oven",
+    "company": "Samsung",
+    "name": "Samsung Grill Microwave",
+    "description": "28L Capacity | Ceramic El | Grill Function | Eco Mode",
+    "regular_price": 15999,
+    "offer_price": 13999,
+    "image": "/assets/Electronics/Microwave/micro8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Micro Oven",
+    "company": "IFB",
+    "name": "IFB 25L Convection Microwave",
+    "description": "25L Capacity | 360° Rotisserie | Auto Cook | Child Lock",
+    "regular_price": 18999,
+    "offer_price": 16999,
+    "image": "/assets/Electronics/Microwave/micro9.webp"
+  },
+  {
+    "featured": false,
+    "category": "Micro Oven",
+    "company": "Haier",
+    "name": "Haier Smart Microwave Oven",
+    "description": "20L Capacity | Solo Microwave | Quick Reheat | Defrost | Compact Design",
+    "regular_price": 9499,
+    "offer_price": 7999,
+    "image": "/assets/Electronics/Microwave/micro10.webp"
+  },
+  {
+    "featured": true,
+    "category": "Mobiles",
+    "company": "OnePlus",
+    "name": "OnePlus 13",
+    "description": "6.82-inch AMOLED Display | Snapdragon 8 Elite | 16GB RAM | 512GB Storage | 6000mAh Battery | 50MP Hasselblad Camera",
+    "regular_price": 74999,
+    "offer_price": 69999,
+    "image": "/assets/Electronics/Phones/phone1.webp"
+  },
+  {
+    "featured": true,
+    "category": "Mobiles",
+    "company": "Apple",
+    "name": "iPhone 16",
+    "description": "6.1-inch Super Retina XDR Display | A18 Chip | 128GB Storage | 48MP Dual Camera | Face ID",
+    "regular_price": 89999,
+    "offer_price": 85999,
+    "image": "/assets/Electronics/Phones/phone2.jpeg"
+  },
+  {
+    "featured": false,
+    "category": "Mobiles",
+    "company": "Samsung",
+    "name": "Samsung Galaxy S25 Ultra",
+    "description": "6.9-inch Dynamic AMOLED 2X | Snapdragon 8 Elite | 12GB RAM | 256GB Storage | S Pen | 200MP Camera",
+    "regular_price": 134999,
+    "offer_price": 129999,
+    "image": "/assets/Electronics/Phones/phone3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Mobiles",
+    "company": "Nothing",
+    "name": "Nothing Phone (3a)",
+    "description": "6.77-inch AMOLED Display | Snapdragon 7s Gen 3 | 8GB RAM | 256GB Storage | Glyph Interface",
+    "regular_price": 32999,
+    "offer_price": 29999,
+    "image": "/assets/Electronics/Phones/phone4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Mobiles",
+    "company": "Apple",
+    "name": "iPhone 15",
+    "description": "6.1-inch Super Retina XDR | A16 Bionic | Dynamic Island | USB-C | 48MP Camera",
+    "regular_price": 79999,
+    "offer_price": 72999,
+    "image": "/assets/Electronics/Phones/phone5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Mobiles",
+    "company": "iQOO",
+    "name": "iQOO Z10R 5G",
+    "description": "6.72-inch 120Hz Display | MediaTek Dimensity Processor | 8GB RAM | 256GB Storage | 6000mAh Battery",
+    "regular_price": 24999,
+    "offer_price": 21999,
+    "image": "/assets/Electronics/Phones/phone6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Mobiles",
+    "company": "Redmi",
+    "name": "Redmi Note 14 5G",
+    "description": "6.67-inch AMOLED Display | Dimensity Processor | 8GB RAM | 256GB Storage | 108MP Camera",
+    "regular_price": 22999,
+    "offer_price": 19999,
+    "image": "/assets/Electronics/Phones/phone7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Mobiles",
+    "company": "Realme",
+    "name": "Realme Narzo 80 Lite",
+    "description": "6.72-inch FHD+ Display | MediaTek Processor | 6GB RAM | 128GB Storage | 6000mAh Battery",
+    "regular_price": 16999,
+    "offer_price": 14999,
+    "image": "/assets/Electronics/Phones/phone8.jpg"
+  },
+  {
+    "featured": false,
+    "category": "Mobiles",
+    "company": "Samsung",
+    "name": "Samsung Galaxy M47 5G",
+    "description": "6.7-inch Super AMOLED Display | Snapdragon Processor | 8GB RAM | 256GB Storage | 6000mAh Battery",
+    "regular_price": 31999,
+    "offer_price": 28999,
+    "image": "/assets/Electronics/Phones/phone9.webp"
+  },
+  {
+    "featured": false,
+    "category": "Shoes",
+    "company": "Nike",
+    "name": "Nike Revolution 7",
+    "description": "Running Shoes | Lightweight Mesh | Cushioned Sole | Everyday Comfort",
+    "regular_price": 4999,
+    "offer_price": 3499,
+    "image": "/assets/Shoes/shoe1.webp"
+  },
+  {
+    "featured": false,
+    "category": "Shoes",
+    "company": "Puma",
+    "name": "Puma Flyer Runner",
+    "description": "Running Shoes | Breathable Mesh | Soft EVA Midsole | Lightweight",
+    "regular_price": 5499,
+    "offer_price": 4299,
+    "image": "/assets/Shoes/shoe2.jpeg"
+  },
+  {
+    "featured": true,
+    "category": "Shoes",
+    "company": "Campus",
+    "name": "Campus Nitro Boost",
+    "description": "Training Shoes | Memory Foam Insole | Flexible Outsole | Everyday Wear",
+    "regular_price": 3999,
+    "offer_price": 2999,
+    "image": "/assets/Shoes/shoe3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Shoes",
+    "company": "Skechers",
+    "name": "Skechers GO Walk",
+    "description": "Walking Shoes | Ultra Light | Slip-On | Air Cooled Memory Foam",
+    "regular_price": 6499,
+    "offer_price": 5199,
+    "image": "/assets/Shoes/shoe4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Shoes",
+    "company": "Bata",
+    "name": "Bata Formal Slip-On",
+    "description": "Men's Formal Shoes | Genuine Leather | Office Wear | Cushioned Footbed",
+    "regular_price": 2999,
+    "offer_price": 2299,
+    "image": "/assets/Shoes/shoe5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Shoes",
+    "company": "Red Tape",
+    "name": "Red Tape Sneakers",
+    "description": "Casual Sneakers | Soft Cushion | Anti-Slip Sole | Stylish Design",
+    "regular_price": 3499,
+    "offer_price": 2699,
+    "image": "/assets/Shoes/shoe6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Shoes",
+    "company": "Woodland",
+    "name": "Woodland Casual Loafers",
+    "description": "Premium Leather | Lightweight | Comfortable Everyday Wear",
+    "regular_price": 4499,
+    "offer_price": 3599,
+    "image": "/assets/Shoes/shoe7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Shoes",
+    "company": "Bata",
+    "name": "Bata Office Loafers",
+    "description": "Classic Formal Loafers | Cushioned Insole | Slip Resistant Sole",
+    "regular_price": 3199,
+    "offer_price": 2499,
+    "image": "/assets/Shoes/shoe8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Shoes",
+    "company": "Sparx",
+    "name": "Sparx Sports Shoes",
+    "description": "Training Shoes | Breathable Upper | Lightweight | Daily Running",
+    "regular_price": 2999,
+    "offer_price": 2299,
+    "image": "/assets/Shoes/shoe9.webp"
+  },
+  {
+    "featured": false,
+    "category": "Shoes",
+    "company": "Campus",
+    "name": "Campus Walking Shoes",
+    "description": "Casual Sports Shoes | Flexible Sole | Memory Foam | Long Lasting Comfort",
+    "regular_price": 3599,
+    "offer_price": 2799,
+    "image": "/assets/Shoes/shoe10.webp"
+  },
+  {
+    "featured": false,
+    "category": "Sports",
+    "company": "Stark",
+    "name": "Badminton Racket Set",
+    "description": "2 Professional Rackets | Shuttlecocks Included | Carry Bag | Lightweight Frame",
+    "regular_price": 2499,
+    "offer_price": 1799,
+    "image": "/assets/Sports/Tennis/sport1.webp"
+  },
+  {
+    "featured": false,
+    "category": "Sports",
+    "company": "Vector X",
+    "name": "Basketball",
+    "description": "Official Size 7 | Indoor & Outdoor Use | High Grip Rubber Surface",
+    "regular_price": 1499,
+    "offer_price": 999,
+    "image": "/assets/Sports/Tennis/sport2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Sports",
+    "company": "CEAT",
+    "name": "Junior Cricket Kit",
+    "description": "Complete Cricket Set | Bat | Pads | Gloves | Helmet | Kit Bag",
+    "regular_price": 6999,
+    "offer_price": 5499,
+    "image": "/assets/Sports/Tennis/sport3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Sports",
+    "company": "Nivia",
+    "name": "Football",
+    "description": "FIFA Training Football | Durable PU Material | Size 5",
+    "regular_price": 1799,
+    "offer_price": 1299,
+    "image": "/assets/Sports/Tennis/sport4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Sports",
+    "company": "SG",
+    "name": "Cricket Bat Combo",
+    "description": "English Willow Style Bat | Tennis Ball Compatible | Protective Cover Included",
+    "regular_price": 2499,
+    "offer_price": 1899,
+    "image": "/assets/Sports/Tennis/sport5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Sports",
+    "company": "Vector X",
+    "name": "Archery Set",
+    "description": "Bow & Arrow Kit | Target Board Included | Beginner Friendly",
+    "regular_price": 2999,
+    "offer_price": 2299,
+    "image": "/assets/Sports/Tennis/sport6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Sports",
+    "company": "Hero",
+    "name": "Mountain Bicycle",
+    "description": "21-Speed Gear Cycle | Front Suspension | Dual Disc Brakes | 26 Inch",
+    "regular_price": 24999,
+    "offer_price": 21999,
+    "image": "/assets/Sports/Tennis/sport7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Sports",
+    "company": "Speedo",
+    "name": "Swimming Goggles",
+    "description": "Anti-Fog Lens | UV Protection | Adjustable Silicone Strap",
+    "regular_price": 999,
+    "offer_price": 749,
+    "image": "/assets/Sports/Tennis/sport8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Sports",
+    "company": "Yonex",
+    "name": "Tennis Racket",
+    "description": "Graphite Frame | Lightweight | Ideal for Beginners & Intermediate Players",
+    "regular_price": 4999,
+    "offer_price": 3799,
+    "image": "/assets/Sports/Tennis/tennis1.jpeg"
+  },
+  {
+    "featured": false,
+    "category": "Study",
+    "company": "Camlin",
+    "name": "Student Geometry Box",
+    "description": "Complete Geometry Set | Compass | Divider | Scale | School Essentials",
+    "regular_price": 699,
+    "offer_price": 499,
+    "image": "/assets/Study/study10.webp"
+  },
+  {
+    "featured": false,
+    "category": "Study",
+    "company": "Luxor",
+    "name": "Premium Spiral Notebook",
+    "description": "300 Pages | A4 Size | Thick Paper | Hardcover Notebook",
+    "regular_price": 499,
+    "offer_price": 349,
+    "image": "/assets/Study/study2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Study",
+    "company": "Home Centre",
+    "name": "Desk Organizer",
+    "description": "Multi-Compartment Storage | Pen Holder | Office & Study Table Organizer",
+    "regular_price": 999,
+    "offer_price": 749,
+    "image": "/assets/Study/study3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Study",
+    "company": "Philips",
+    "name": "LED Study Lamp",
+    "description": "Eye Protection | Adjustable Brightness | USB Powered | Foldable Design",
+    "regular_price": 1999,
+    "offer_price": 1499,
+    "image": "/assets/Study/study4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Study",
+    "company": "Finegrip",
+    "name": "Ball Pen Pack",
+    "description": "Pack of 50 Smooth Writing Pens | Blue Ink | Long Lasting",
+    "regular_price": 499,
+    "offer_price": 349,
+    "image": "/assets/Study/study5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Study",
+    "company": "Globe World",
+    "name": "Educational Globe",
+    "description": "Political World Map | 10-inch Rotating Globe | Learning Tool for Students",
+    "regular_price": 1999,
+    "offer_price": 1499,
+    "image": "/assets/Study/study6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Study",
+    "company": "Deli",
+    "name": "Magnetic Bookmarks Set",
+    "description": "Cute Magnetic Bookmarks | Pack of 6 | Reusable Page Markers",
+    "regular_price": 399,
+    "offer_price": 249,
+    "image": "/assets/Study/study7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Study",
+    "company": "Classmate",
+    "name": "Notebook Combo Pack",
+    "description": "Pack of 5 Long Notebooks | Premium Paper | School & College Use",
+    "regular_price": 899,
+    "offer_price": 699,
+    "image": "/assets/Study/study8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Study",
+    "company": "Faber-Castell",
+    "name": "Pencil Holder",
+    "description": "Modern Desk Pencil Stand | Decorative Design | Office & Study Organizer",
+    "regular_price": 599,
+    "offer_price": 399,
+    "image": "/assets/Study/study9.webp"
+  },
+  {
+    "featured": false,
+    "category": "Televisions",
+    "company": "Samsung",
+    "name": "Samsung Crystal 4K UHD TV",
+    "description": "55-inch | Crystal Processor 4K | HDR10+ | Smart TV | Voice Assistant",
+    "regular_price": 64999,
+    "offer_price": 57999,
+    "image": "/assets/Electronics/TV/TV1.webp"
+  },
+  {
+    "featured": false,
+    "category": "Televisions",
+    "company": "LG",
+    "name": "LG NanoCell Smart TV",
+    "description": "50-inch | 4K UHD | WebOS | AI ThinQ | Dolby Audio",
+    "regular_price": 59999,
+    "offer_price": 53999,
+    "image": "/assets/Electronics/TV/TV2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Televisions",
+    "company": "Sony",
+    "name": "Sony Bravia Google TV",
+    "description": "55-inch | 4K HDR | Google TV | Dolby Vision | X1 Processor",
+    "regular_price": 78999,
+    "offer_price": 71999,
+    "image": "/assets/Electronics/TV/TV3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Televisions",
+    "company": "OnePlus",
+    "name": "OnePlus Y1S Pro",
+    "description": "43-inch | 4K UHD | Android TV | Dolby Audio | Bezel-less Design",
+    "regular_price": 34999,
+    "offer_price": 30999,
+    "image": "/assets/Electronics/TV/TV4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Televisions",
+    "company": "Xiaomi",
+    "name": "Mi X Series Smart TV",
+    "description": "50-inch | 4K UHD | Android TV | Dolby Vision | PatchWall",
+    "regular_price": 42999,
+    "offer_price": 38999,
+    "image": "/assets/Electronics/TV/TV5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Televisions",
+    "company": "TCL",
+    "name": "TCL QLED Google TV",
+    "description": "55-inch | QLED Display | Google TV | MEMC | Dolby Atmos",
+    "regular_price": 52999,
+    "offer_price": 47999,
+    "image": "/assets/Electronics/TV/TV6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Televisions",
+    "company": "Hisense",
+    "name": "Hisense Smart UHD TV",
+    "description": "43-inch | 4K UHD | VIDAA OS | DTS Virtual:X | HDR10",
+    "regular_price": 31999,
+    "offer_price": 27999,
+    "image": "/assets/Electronics/TV/TV7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Televisions",
+    "company": "Vu",
+    "name": "Vu Premium Android TV",
+    "description": "50-inch | 4K UHD | Android TV | Dolby Vision | Built-in Chromecast",
+    "regular_price": 39999,
+    "offer_price": 35999,
+    "image": "/assets/Electronics/TV/TV8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Televisions",
+    "company": "Sony",
+    "name": "Sony Bravia Google TV",
+    "description": "55-inch | 4K HDR | Google TV | Dolby Vision | X1 Processor",
+    "regular_price": 78999,
+    "offer_price": 71999,
+    "image": "/assets/Electronics/TV/TV9.webp"
+  },
+  {
+    "featured": false,
+    "category": "Televisions",
+    "company": "Sony",
+    "name": "Sony Bravia Google TV",
+    "description": "55-inch | 4K HDR | Google TV | Dolby Vision | X1 Processor",
+    "regular_price": 78999,
+    "offer_price": 71999,
+    "image": "/assets/Electronics/TV/TV5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Toys",
+    "company": "Rock Crawler",
+    "name": "Remote Control Monster Truck",
+    "description": "4WD RC Monster Truck | Off-Road Racing | Rechargeable Battery",
+    "regular_price": 4999,
+    "offer_price": 3499,
+    "image": "/assets/Kids/Toys/toy1.webp"
+  },
+  {
+    "featured": false,
+    "category": "Toys",
+    "company": "Toyshine",
+    "name": "Dancing Cactus Toy",
+    "description": "Talking & Dancing Cactus | USB Rechargeable | Musical Toy for Kids",
+    "regular_price": 1999,
+    "offer_price": 1299,
+    "image": "/assets/Kids/Toys/toy2.webp"
+  },
+  {
+    "featured": false,
+    "category": "Toys",
+    "company": "FunBlast",
+    "name": "DIY Car Track Set",
+    "description": "Educational Racing Track | Building Blocks | Creative Play Set",
+    "regular_price": 2499,
+    "offer_price": 1799,
+    "image": "/assets/Kids/Toys/toy3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Toys",
+    "company": "Hot Wheels",
+    "name": "Die-Cast Car Collection",
+    "description": "Pack of Mini Metal Cars | Realistic Design | Collectible Toys",
+    "regular_price": 1499,
+    "offer_price": 999,
+    "image": "/assets/Kids/Toys/toy4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Toys",
+    "company": "BabyGo",
+    "name": "Interactive Musical Toy",
+    "description": "Light & Sound Learning Toy | Educational Activity Toy for Toddlers",
+    "regular_price": 1899,
+    "offer_price": 1299,
+    "image": "/assets/Kids/Toys/toy5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Toys",
+    "company": "CAT",
+    "name": "Construction Bulldozer Toy",
+    "description": "Friction Powered Construction Vehicle | Heavy Duty Plastic Toy",
+    "regular_price": 999,
+    "offer_price": 699,
+    "image": "/assets/Kids/Toys/toy6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Toys",
+    "company": "Toyshine",
+    "name": "Police Car Projector Toy",
+    "description": "LED Light & Music Police Car | Rotating Lights | Battery Operated",
+    "regular_price": 1499,
+    "offer_price": 999,
+    "image": "/assets/Kids/Toys/toy7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Toys",
+    "company": "Kids Learning",
+    "name": "Kids Learning Smartphone",
+    "description": "Educational Touch Phone | ABC, Numbers & Games | Rechargeable",
+    "regular_price": 2499,
+    "offer_price": 1799,
+    "image": "/assets/Kids/Toys/toy8.webp"
+  },
+  {
+    "featured": false,
+    "category": "Toys",
+    "company": "RoboFun",
+    "name": "Smart Dancing Robot",
+    "description": "Gesture Control Robot | Music & Dance | Interactive Educational Toy",
+    "regular_price": 2999,
+    "offer_price": 2199,
+    "image": "/assets/Kids/Toys/toy9.webp"
+  },
+  {
+    "featured": true,
+    "category": "Washing Machine",
+    "company": "LG",
+    "name": "LG AI Direct Drive Front Load",
+    "description": "9 Kg | AI Direct Drive | Steam Wash | Wi-Fi | Inverter Motor",
+    "regular_price": 52990,
+    "offer_price": 48990,
+    "image": "/assets/Electronics/Washing Machines/washing2.jpeg"
+  },
+  {
+    "featured": false,
+    "category": "Washing Machine",
+    "company": "Whirlpool",
+    "name": "Whirlpool Magic Clean 7 Kg",
+    "description": "7 Kg | Top Load | 5 Star Rating | Hard Water Wash | ZPF Technology",
+    "regular_price": 19990,
+    "offer_price": 17490,
+    "image": "/assets/Electronics/Washing Machines/washing3.jpeg"
+  },
+  {
+    "featured": false,
+    "category": "Washing Machine",
+    "company": "Samsung",
+    "name": "Samsung Ecobubble Top Load",
+    "description": "8 Kg | Ecobubble | Digital Inverter | Soft Closing Door | 5 Star",
+    "regular_price": 26990,
+    "offer_price": 23990,
+    "image": "/assets/Electronics/Washing Machines/washing4.jpeg"
+  },
+  {
+    "featured": false,
+    "category": "Washing Machine",
+    "company": "LG",
+    "name": "LG Smart Inverter Top Load",
+    "description": "7 Kg | Smart Inverter | TurboDrum | Smart Diagnosis | 5 Star",
+    "regular_price": 22990,
+    "offer_price": 19990,
+    "image": "/assets/Electronics/Washing Machines/washing5.jpeg"
+  },
+  {
+    "featured": false,
+    "category": "Washing Machine",
+    "company": "Samsung",
+    "name": "Samsung EcoBubble AI Wash",
+    "description": "9 Kg | AI Wash | Ecobubble | Hygiene Steam | Digital Inverter",
+    "regular_price": 43990,
+    "offer_price": 39990,
+    "image": "/assets/Electronics/Washing Machines/washing6.jpeg"
+  },
+  {
+    "featured": false,
+    "category": "Washing Machine",
+    "company": "LG",
+    "name": "LG Steam AI DD Front Load",
+    "description": "8 Kg | AI Direct Drive | Steam | Smart Diagnosis | ThinQ",
+    "regular_price": 46990,
+    "offer_price": 42990,
+    "image": "/assets/Electronics/Washing Machines/washing7.jpeg"
+  },
+  {
+    "featured": false,
+    "category": "Washing Machine",
+    "company": "IFB",
+    "name": "IFB Senator Front Load",
+    "description": "8 Kg | AI Powered | Steam Refresh | 1400 RPM | Inverter Motor",
+    "regular_price": 45990,
+    "offer_price": 41990,
+    "image": "/assets/Electronics/Washing Machines/washing8.jpeg"
+  },
+  {
+    "featured": false,
+    "category": "Washing Machine",
+    "company": "Bosch",
+    "name": "Bosch Series 6 Front Load",
+    "description": "8 Kg | EcoSilence Drive | Anti-Vibration | ActiveWater Plus",
+    "regular_price": 49990,
+    "offer_price": 45990,
+    "image": "/assets/Electronics/Washing Machines/washing1.jpeg"
+  },
+  {
+    "featured": false,
+    "category": "Wearables",
+    "company": "Titan",
+    "name": "Titan Gold Analog Watch",
+    "description": "Men's Analog Watch | Stainless Steel Strap | Water Resistant | Quartz Movement",
+    "regular_price": 6995,
+    "offer_price": 5499,
+    "image": "/assets/Electronics/Wearables/watch1.jpeg"
+  },
+  {
+    "featured": false,
+    "category": "Wearables",
+    "company": "Fastrack",
+    "name": "Fastrack Minimalist Analog",
+    "description": "Premium Leather Strap | Slim Dial | Quartz Movement | Casual Wear",
+    "regular_price": 3495,
+    "offer_price": 2799,
+    "image": "/assets/Electronics/Wearables/watch3.webp"
+  },
+  {
+    "featured": false,
+    "category": "Wearables",
+    "company": "Fossil",
+    "name": "Fossil Machine Chronograph",
+    "description": "Chronograph Watch | Leather Strap | Mineral Glass | Water Resistant",
+    "regular_price": 11995,
+    "offer_price": 9999,
+    "image": "/assets/Electronics/Wearables/watch4.webp"
+  },
+  {
+    "featured": false,
+    "category": "Wearables",
+    "company": "Timex",
+    "name": "Timex Premium Analog",
+    "description": "Stainless Steel Strap | Quartz Movement | Elegant Formal Design",
+    "regular_price": 5995,
+    "offer_price": 4799,
+    "image": "/assets/Electronics/Wearables/watch5.webp"
+  },
+  {
+    "featured": false,
+    "category": "Wearables",
+    "company": "Titan",
+    "name": "Titan Skeleton Automatic",
+    "description": "Automatic Movement | Skeleton Dial | Genuine Leather Strap",
+    "regular_price": 15995,
+    "offer_price": 13999,
+    "image": "/assets/Electronics/Wearables/watch6.webp"
+  },
+  {
+    "featured": false,
+    "category": "Wearables",
+    "company": "Titan",
+    "name": "Titan Neo Analog",
+    "description": "Minimal Black Dial | Stainless Steel Strap | Quartz Watch",
+    "regular_price": 4995,
+    "offer_price": 3899,
+    "image": "/assets/Electronics/Wearables/watch7.webp"
+  },
+  {
+    "featured": false,
+    "category": "Wearables",
+    "company": "Noise",
+    "name": "Noise ColorFit Pro 6",
+    "description": "1.96-inch AMOLED Display | Bluetooth Calling | Heart Rate | SpO₂ Monitor",
+    "regular_price": 6999,
+    "offer_price": 5499,
+    "image": "/assets/Electronics/Wearables/watch8.webp"
+  },
+  {
+    "featured": true,
+    "category": "Wearables",
+    "company": "boAt",
+    "name": "boAt Lunar Connect",
+    "description": "Bluetooth Calling | AMOLED Display | 100+ Sports Modes | IP68 Rating",
+    "regular_price": 4999,
+    "offer_price": 3499,
+    "image": "/assets/Electronics/Wearables/watch9.webp"
+  },
+  {
+    "featured": false,
+    "category": "Wearables",
+    "company": "Fire-Boltt",
+    "name": "Fire-Boltt Visionary",
+    "description": "1.78-inch AMOLED | Bluetooth Calling | Heart Rate | Sleep Monitor",
+    "regular_price": 5999,
+    "offer_price": 3999,
+    "image": "/assets/Electronics/Wearables/watch10.jpg"
+  }
+]

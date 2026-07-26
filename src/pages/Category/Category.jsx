@@ -1,9 +1,9 @@
 import { useParams, Link } from "react-router-dom";
-import products from "../../data/products";
+import { useState, useEffect, useContext } from "react";
+import productApi from "../../api/productApi";
 import "./Category.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import { useContext } from "react";
 import { WishlistContext } from "../../context/WishlistContext";
 import { CartContext } from "../../context/CartContext";
 
@@ -11,9 +11,33 @@ function Category() {
 
     const { categoryName } = useParams();
 
-    const filteredProducts = products.filter(
-        product => product.category === categoryName
-    );
+    const [products, setProducts] = useState([]);
+
+useEffect(() => {
+
+    const fetchProducts = async () => {
+
+        try {
+
+            const response = await productApi.get("/products");
+
+            setProducts(response.data);
+
+        } catch (error) {
+
+            console.error(error);
+
+        }
+
+    };
+
+    fetchProducts();
+
+}, []);
+
+const filteredProducts = products.filter(
+    product => product.category === categoryName
+);
 
     const {
         addToWishlist,
@@ -23,6 +47,8 @@ function Category() {
     const {
         addToCart
     } = useContext(CartContext);
+
+    console.log(filteredProducts);
 
     return (
 

@@ -14,7 +14,10 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.4.2",
+    "esbuild-register": "^3.6.0",
     "express": "^5.2.1",
+    "fs-extra": "^11.3.6",
+    "mysql2": "^3.23.1",
     "razorpay": "^2.9.8"
   },
   "devDependencies": {

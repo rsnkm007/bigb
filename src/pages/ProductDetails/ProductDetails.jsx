@@ -1,23 +1,59 @@
-import { useContext } from "react";
 import { WishlistContext } from "../../context/WishlistContext";
 
 import { useParams, useNavigate } from "react-router-dom";
-import products from "../../data/products";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import "./ProductDetails.css";
 import { CartContext } from "../../context/CartContext";
+import { useEffect, useState, useContext } from "react";
+import productApi from "../../api/productApi";
 
 function ProductDetails() {
 
     const { category, id } = useParams();
     const navigate = useNavigate();
+    const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-    const product = products.find(
-        item =>
-            item.category === category &&
-            item.id === Number(id)
-    );
+    useEffect(() => {
+
+    const fetchProduct = async () => {
+
+        try {
+
+            const response = await productApi.get("/products");
+
+            const foundProduct = response.data.find(
+
+                item =>
+
+                    item.category === category &&
+
+                    item.id === Number(id)
+
+            );
+
+            setProduct(foundProduct);
+
+        }
+
+        catch (error) {
+
+            console.error(error);
+
+        }
+
+        finally {
+
+            setLoading(false);
+
+        }
+
+    };
+
+    fetchProduct();
+
+}, [category, id]);
 
     const {
         addToWishlist,
@@ -27,6 +63,26 @@ function ProductDetails() {
     const {
         addToCart
     } = useContext(CartContext);
+
+    if (loading) {
+
+    return (
+
+        <>
+
+            <Header />
+
+            <h1 style={{ marginTop: "150px", textAlign: "center" }}>
+
+                Loading...
+
+            </h1>
+
+        </>
+
+    );
+
+}
 
     if (!product) {
         return (
