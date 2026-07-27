@@ -9,6 +9,7 @@ import wishlistRoutes from "./routes/wishlistRoutes.js";
 import cartRoutes from "./routes/cartRoutes.js";
 import addressRoutes from "./routes/addressRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
+import adminRoutes from "./routes/adminRoutes.js";
 
 dotenv.config();
 
@@ -43,3 +44,5 @@ app.use("/api/cart", cartRoutes);
 app.use("/api/address", addressRoutes);
 
 app.use("/api/orders", orderRoutes);
+
+app.use("/api/admin", adminRoutes);

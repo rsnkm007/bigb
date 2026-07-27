@@ -97,123 +97,15 @@ function CartProvider({ children }) {
 
     const removeFromCart = async (category, id) => {
 
-    const user = auth.currentUser;
+        const user = auth.currentUser;
 
-    if (!user || user.isAnonymous) {
+        if (!user || user.isAnonymous) {
 
-        return;
+            return;
 
-    }
+        }
 
-    try {
-
-        await productApi.delete(
-
-            `/cart/${user.uid}/${id}`
-
-        );
-
-        const response = await productApi.get(
-
-            `/cart/${user.uid}`
-
-        );
-
-        setCart(response.data);
-
-    }
-
-    catch (error) {
-
-        console.error(error);
-
-    }
-
-};
-
-    // Increase Quantity
-
-    const increaseQuantity = async (category, id) => {
-
-    const user = auth.currentUser;
-
-    if (!user || user.isAnonymous) {
-
-        return;
-
-    }
-
-    const product = cart.find(
-
-        item =>
-
-            item.category === category &&
-
-            item.id === id
-
-    );
-
-    if (!product) return;
-
-    try {
-
-        await productApi.put(
-
-            `/cart/${user.uid}/${id}`,
-
-            {
-
-                quantity: product.quantity + 1
-
-            }
-
-        );
-
-        const response = await productApi.get(
-
-            `/cart/${user.uid}`
-
-        );
-
-        setCart(response.data);
-
-    }
-
-    catch (error) {
-
-        console.error(error);
-
-    }
-
-};
-
-    // Decrease Quantity
-
-    const decreaseQuantity = async (category, id) => {
-
-    const user = auth.currentUser;
-
-    if (!user || user.isAnonymous) {
-
-        return;
-
-    }
-
-    const product = cart.find(
-
-        item =>
-
-            item.category === category &&
-
-            item.id === id
-
-    );
-
-    if (!product) return;
-
-    try {
-
-        if (product.quantity === 1) {
+        try {
 
             await productApi.delete(
 
@@ -221,9 +113,49 @@ function CartProvider({ children }) {
 
             );
 
+            const response = await productApi.get(
+
+                `/cart/${user.uid}`
+
+            );
+
+            setCart(response.data);
+
         }
 
-        else {
+        catch (error) {
+
+            console.error(error);
+
+        }
+
+    };
+
+    // Increase Quantity
+
+    const increaseQuantity = async (category, id) => {
+
+        const user = auth.currentUser;
+
+        if (!user || user.isAnonymous) {
+
+            return;
+
+        }
+
+        const product = cart.find(
+
+            item =>
+
+                item.category === category &&
+
+                item.id === id
+
+        );
+
+        if (!product) return;
+
+        try {
 
             await productApi.put(
 
@@ -231,35 +163,123 @@ function CartProvider({ children }) {
 
                 {
 
-                    quantity: product.quantity - 1
+                    quantity: product.quantity + 1
 
                 }
 
             );
 
+            const response = await productApi.get(
+
+                `/cart/${user.uid}`
+
+            );
+
+            setCart(response.data);
+
         }
 
-        const response = await productApi.get(
+        catch (error) {
 
-            `/cart/${user.uid}`
+            console.error(error);
+
+        }
+
+    };
+
+    // Decrease Quantity
+
+    const decreaseQuantity = async (category, id) => {
+
+        const user = auth.currentUser;
+
+        if (!user || user.isAnonymous) {
+
+            return;
+
+        }
+
+        const product = cart.find(
+
+            item =>
+
+                item.category === category &&
+
+                item.id === id
 
         );
 
-        setCart(response.data);
+        if (!product) return;
 
-    }
+        try {
 
-    catch (error) {
+            if (product.quantity === 1) {
 
-        console.error(error);
+                await productApi.delete(
 
-    }
+                    `/cart/${user.uid}/${id}`
 
-};
+                );
 
-    const clearCart = () => {
+            }
 
-        setCart([]);
+            else {
+
+                await productApi.put(
+
+                    `/cart/${user.uid}/${id}`,
+
+                    {
+
+                        quantity: product.quantity - 1
+
+                    }
+
+                );
+
+            }
+
+            const response = await productApi.get(
+
+                `/cart/${user.uid}`
+
+            );
+
+            setCart(response.data);
+
+        }
+
+        catch (error) {
+
+            console.error(error);
+
+        }
+
+    };
+
+    const clearCart = async () => {
+
+        const user = auth.currentUser;
+
+        if (!user || user.isAnonymous) {
+
+            return;
+
+        }
+
+        try {
+
+            await productApi.delete(`/cart/${user.uid}`);
+
+            setCart([]);
+
+        }
+
+        catch (error) {
+
+            console.error(error);
+
+        }
 
     };
 

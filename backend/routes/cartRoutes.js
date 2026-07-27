@@ -8,7 +8,9 @@ import {
 
     updateQuantity,
 
-    removeFromCart
+    removeFromCart,
+
+    clearCart
 
 } from "../controllers/cartController.js";
 
@@ -19,19 +21,18 @@ router.post("/", addToCart);
 router.get("/:firebase_uid", getCart);
 
 router.put(
-
     "/:firebase_uid/:product_id",
-
     updateQuantity
-
 );
 
 router.delete(
-
     "/:firebase_uid/:product_id",
-
     removeFromCart
+);
 
+router.delete(
+    "/:firebase_uid",
+    clearCart
 );
 
 export default router;

@@ -33,8 +33,12 @@ import Notifications from "./pages/Notifications/Notifications";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Address from "./pages/Address/Address";
 import HelpSupport from "./pages/HelpSupport/HelpSupport";
-
-
+import AdminLogin from "./pages/Admin/AdminLogin";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
+import Products from "./pages/Admin/Products";
+import Orders from "./pages/Admin/Orders";
+import OrderDetails from "./pages/Admin/OrderDetails";
+import Users from "./pages/Admin/Users";
 
 function App() {
 
@@ -213,6 +217,43 @@ function App() {
           path="/help-support"
           element={<HelpSupport />}
         />
+
+        <Route
+
+          path="/admin"
+
+          element={<AdminLogin />}
+
+        />
+
+        <Route
+
+          path="/admin/dashboard"
+
+          element={<AdminDashboard />}
+
+        />
+
+        <Route
+
+          path="/admin/products"
+
+          element={<Products />}
+
+        />
+
+        <Route path="/admin/orders" element={<Orders />} />
+
+
+        <Route
+
+          path="/admin/orders/:id"
+
+          element={<OrderDetails />}
+
+        />
+
+        <Route path="/admin/users" element={<Users />} />
 
         <Route path="/about" element={<About />} />
 

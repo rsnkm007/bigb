@@ -1,0 +1,27 @@
+body{
+
+    margin:0;
+
+    background:#f3f4f6;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.admin-layout{
+
+    display:flex;
+
+}
+
+.admin-main{
+
+    margin-left:240px;
+
+    width:calc(100% - 240px);
+
+    min-height:100vh;
+
+    padding:25px;
+
+}

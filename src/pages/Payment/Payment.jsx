@@ -119,7 +119,7 @@ function Payment() {
 
               });
 
-              clearCart();
+              await clearCart();
 
               navigate("/order-success");
 

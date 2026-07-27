@@ -244,3 +244,34 @@ export const removeFromCart = (req, res) => {
     );
 
 };
+
+export const clearCart = (req, res) => {
+
+    const { firebase_uid } = req.params;
+
+    const sql = `
+        DELETE FROM cart
+        WHERE firebase_uid = ?
+    `;
+
+    db.query(sql, [firebase_uid], (err) => {
+
+        if (err) {
+
+            console.error(err);
+
+            return res.status(500).json({
+                success: false,
+                message: "Database Error"
+            });
+
+        }
+
+        res.json({
+            success: true,
+            message: "Cart Cleared"
+        });
+
+    });
+
+};

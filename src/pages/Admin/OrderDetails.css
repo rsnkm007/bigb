@@ -1,0 +1,93 @@
+.order-details{
+    padding:30px;
+    max-width:900px;
+}
+
+.order-details h1{
+    margin-bottom:30px;
+    font-size:34px;
+}
+
+.order-details h2{
+    margin-top:30px;
+    margin-bottom:15px;
+    color:#2563eb;
+    font-size:22px;
+}
+
+.order-details p{
+    margin:8px 0;
+    font-size:16px;
+}
+
+.order-item{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:15px;
+    margin-bottom:15px;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.order-item img{
+    width:90px;
+    height:90px;
+    object-fit:cover;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+.order-item h3{
+    margin:0 0 8px;
+    font-size:18px;
+}
+
+.order-item p{
+    margin:0;
+    color:#666;
+}
+
+.order-details select{
+    margin-top:10px;
+    width:220px;
+    padding:10px 15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.order-details button{
+  background-color: white;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  border-radius:8px;
+  margin-left: 10px;
+  font-size:15px;
+  transition: all .3s ease-in-out;
+}
+
+.order-details button:hover{
+  background-color: #2563eb;
+  color: white
+}
+.update-btn{
+    display:block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#16a34a;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.update-btn:hover{
+    background:#15803d;
+}

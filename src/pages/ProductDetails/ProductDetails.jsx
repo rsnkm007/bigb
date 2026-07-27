@@ -17,43 +17,41 @@ function ProductDetails() {
 
     useEffect(() => {
 
-    const fetchProduct = async () => {
+        const fetchProduct = async () => {
 
-        try {
+            try {
 
-            const response = await productApi.get("/products");
+                const response = await productApi.get("/products");
 
-            const foundProduct = response.data.find(
+                const foundProduct = response.data.find((item) => {
 
-                item =>
+                    return item.id === Number(id);
 
-                    item.category === category &&
+                });
 
-                    item.id === Number(id)
+                console.log("Found Product:", foundProduct);
 
-            );
+                setProduct(foundProduct);
 
-            setProduct(foundProduct);
+            }
 
-        }
+            catch (error) {
 
-        catch (error) {
+                console.error(error);
 
-            console.error(error);
+            }
 
-        }
+            finally {
 
-        finally {
+                setLoading(false);
 
-            setLoading(false);
+            }
 
-        }
+        };
 
-    };
+        fetchProduct();
 
-    fetchProduct();
-
-}, [category, id]);
+    }, [category, id]);
 
     const {
         addToWishlist,
@@ -66,23 +64,23 @@ function ProductDetails() {
 
     if (loading) {
 
-    return (
+        return (
 
-        <>
+            <>
 
-            <Header />
+                <Header />
 
-            <h1 style={{ marginTop: "150px", textAlign: "center" }}>
+                <h1 style={{ marginTop: "150px", textAlign: "center" }}>
 
-                Loading...
+                    Loading...
 
-            </h1>
+                </h1>
 
-        </>
+            </>
 
-    );
+        );
 
-}
+    }
 
     if (!product) {
         return (

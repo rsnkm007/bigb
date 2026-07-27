@@ -1,0 +1,50 @@
+.orders-page{
+    padding:30px;
+}
+
+.orders-page h1{
+    margin-bottom:25px;
+    font-size:32px;
+    font-weight:600;
+}
+
+.orders-page table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.orders-page th{
+    background:#1f2937;
+    color:#fff;
+    padding:16px;
+    text-align:left;
+    font-weight:600;
+}
+
+.orders-page td{
+    padding:16px;
+    border-bottom:1px solid #ececec;
+}
+
+.orders-page tr:hover{
+    background:#f8f8f8;
+}
+
+.orders-page button{
+    padding:8px 18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#2563eb;
+    color:#fff;
+    font-weight:500;
+    transition:.3s;
+}
+
+.orders-page button:hover{
+    background:#1d4ed8;
+}

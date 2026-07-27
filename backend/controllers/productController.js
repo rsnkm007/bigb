@@ -2,13 +2,47 @@ import db from "../config/db.js";
 
 export const getProducts = (req, res) => {
 
-    const sql = "SELECT * FROM products";
+    const { search } = req.query;
 
-    db.query(sql, (err, result) => {
+    let sql = `
+        SELECT *
+        FROM products
+    `;
+
+    const values = [];
+
+    if (search) {
+
+        sql += `
+            WHERE
+                name LIKE ?
+                OR category LIKE ?
+                OR company LIKE ?
+        `;
+
+        values.push(
+            `%${search}%`,
+            `%${search}%`,
+            `%${search}%`
+        );
+
+    }
+
+    sql += " ORDER BY id DESC";
+
+    db.query(sql, values, (err, result) => {
 
         if (err) {
 
-            return res.status(500).json(err);
+            console.error(err);
+
+            return res.status(500).json({
+
+                success: false,
+
+                message: "Database Error"
+
+            });
 
         }
 

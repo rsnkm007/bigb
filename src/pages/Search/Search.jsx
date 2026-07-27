@@ -1,30 +1,48 @@
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
-import products from "../../data/products";
-
 import { Link, useParams } from "react-router-dom";
+import { useEffect, useState, useCallback } from "react";
+
+import productApi from "../../api/productApi";
 
 function Search() {
 
+    const [products, setProducts] = useState([]);
+
     const { keyword } = useParams();
 
-    const search = keyword.toLowerCase();
+    const loadProducts = useCallback(async () => {
 
-const filteredProducts = products.filter((product) => {
+    try {
 
-    return (
+        const response = await productApi.get(
+            `/products?search=${keyword}`
+        );
 
-        product.name.toLowerCase().includes(search)
+        setProducts(response.data);
 
-        ||
+    }
 
-        product.category.toLowerCase().includes(search)
+    catch (error) {
 
-    );
+        console.error(error);
 
-});
+    }
 
+}, [keyword]);
+
+useEffect(() => {
+
+    loadProducts();
+
+}, [loadProducts]);
+
+useEffect(() => {
+
+    loadProducts();
+
+}, [keyword]);
     return (
 
         <>
@@ -33,8 +51,8 @@ const filteredProducts = products.filter((product) => {
 
             <div
                 style={{
-                    marginTop:"120px",
-                    padding:"20px"
+                    marginTop: "120px",
+                    padding: "20px"
                 }}
             >
 
@@ -46,7 +64,7 @@ const filteredProducts = products.filter((product) => {
 
                 <p>
 
-                    {filteredProducts.length}
+                    {products.length}
 
                     {" "}Products Found
 
@@ -58,7 +76,7 @@ const filteredProducts = products.filter((product) => {
 
                     {
 
-                        filteredProducts.map(product=>(
+                        products.map(product => (
 
                             <Link
 
@@ -100,7 +118,7 @@ const filteredProducts = products.filter((product) => {
 
                     }
 
-            </div>
+                </div>
 
             </div>
 

@@ -8,28 +8,30 @@ import AddressProvider from "./context/AddressProvider";
 import OrderProvider from "./context/OrderProvider";
 import SearchProvider from "./context/SearchProvider";
 import NotificationProvider from "./context/NotificationProvider";
+import AdminProvider from "./context/AdminProvider";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <SearchProvider>
-    <WishlistProvider>
-      <CartProvider>
+      <WishlistProvider>
+        <CartProvider>
 
-        <AddressProvider>
+          <AddressProvider>
 
             <OrderProvider>
               <NotificationProvider>
+                <AdminProvider>
 
-                <App/>
-
-                </NotificationProvider>
+                  <App />
+                </AdminProvider>
+              </NotificationProvider>
 
             </OrderProvider>
 
-        </AddressProvider>
+          </AddressProvider>
 
-      </CartProvider>
-    </WishlistProvider>
+        </CartProvider>
+      </WishlistProvider>
     </SearchProvider>
   </StrictMode>
 );
