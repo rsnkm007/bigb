@@ -12,14 +12,27 @@ import adminApi from "../../api/adminApi";
 function Products() {
 
   const [products, setProducts] = useState([]);
+  const [search, setSearch] = useState("");
 
-  const loadProducts = useCallback(async () => {
+  const [category, setCategory] = useState("All");
+
+  const [company, setCompany] = useState("All");
+
+  const [featured, setFeatured] = useState("All");
+
+  const [categories, setCategories] = useState([]);
+
+  const [companies, setCompanies] = useState([]);
+
+  const loadFilters = useCallback(async () => {
 
     try {
 
-      const response = await productApi.get("/products");
+      const response = await productApi.get("/products/filters");
 
-      setProducts(response.data);
+      setCategories(response.data.categories);
+
+      setCompanies(response.data.companies);
 
     }
 
@@ -31,49 +44,103 @@ function Products() {
 
   }, []);
 
-  const deleteProduct = async (id) => {
 
-    const confirmDelete = window.confirm(
 
-        "Are you sure you want to delete this product?"
-
-    );
-
-    if (!confirmDelete) {
-
-        return;
-
-    }
+  const loadProducts = useCallback(async () => {
 
     try {
 
-        await adminApi.delete(
+      const response = await productApi.get(
 
-            `/admin/products/${id}`
+        "/products",
 
-        );
+        {
 
-        alert("Product Deleted Successfully");
+          params: {
 
-        loadProducts();
+            search,
+
+            category,
+
+            company,
+
+            featured
+
+          }
+
+        }
+
+      );
+
+      setProducts(response.data);
 
     }
 
     catch (error) {
 
-        console.error(error);
-
-        alert("Failed to Delete Product");
+      console.error(error);
 
     }
 
-};
+  }, [search,
+
+    category,
+
+    company,
+
+    featured]);
+
+  const deleteProduct = async (id) => {
+
+    const confirmDelete = window.confirm(
+
+      "Are you sure you want to delete this product?"
+
+    );
+
+    if (!confirmDelete) {
+
+      return;
+
+    }
+
+    try {
+
+      await adminApi.delete(
+
+        `/admin/products/${id}`
+
+      );
+
+      alert("Product Deleted Successfully");
+
+      loadProducts();
+
+    }
+
+    catch (error) {
+
+      console.error(error);
+
+      alert("Failed to Delete Product");
+
+    }
+
+  };
 
   useEffect(() => {
 
     loadProducts();
 
-  }, [loadProducts]);
+    loadFilters();
+
+  }, [
+
+    loadProducts,
+
+    loadFilters
+
+  ]);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -92,6 +159,112 @@ function Products() {
         <div className="products-page">
 
           <div className="products-header">
+
+            <div className="product-filters">
+
+              <input
+                type="text"
+                placeholder="Search Product..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+
+              <select
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+              >
+
+                <option value="All">
+
+                  All Categories
+
+                </option>
+
+                {
+
+                  categories.map(item => (
+
+                    <option
+
+                      key={item}
+
+                      value={item}
+
+                    >
+
+                      {item}
+
+                    </option>
+
+                  ))
+
+                }
+
+              </select>
+
+              <select
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
+              >
+
+                <option value="All">
+
+                  All Companies
+
+                </option>
+
+                {
+
+                  companies.map(item => (
+
+                    <option
+
+                      key={item}
+
+                      value={item}
+
+                    >
+
+                      {item}
+
+                    </option>
+
+                  ))
+
+                }
+
+              </select>
+
+              <select
+                value={featured}
+                onChange={(e) => setFeatured(e.target.value)}
+              >
+                <option value="All">All Products</option>
+                <option value="Yes">Featured</option>
+                <option value="No">Not Featured</option>
+              </select>
+
+              <button
+
+                onClick={() => {
+
+                  setSearch("");
+
+                  setCategory("All");
+
+                  setCompany("All");
+
+                  setFeatured("All");
+
+                }}
+
+              >
+
+                Reset
+
+              </button>
+
+            </div>
 
             <h1>
 

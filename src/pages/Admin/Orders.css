@@ -1,5 +1,5 @@
 .orders-page{
-    padding:30px;
+    padding:0px;
 }
 
 .orders-page h1{
@@ -47,4 +47,38 @@
 
 .orders-page button:hover{
     background:#1d4ed8;
+}
+
+.order-filters{
+
+    display:flex;
+
+    gap:15px;
+
+    margin:20px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.order-filters input{
+
+    padding:10px;
+
+    width:250px;
+
+}
+
+.order-filters select{
+
+    padding:10px;
+
+}
+
+.order-filters button{
+
+    padding:10px 20px;
+
+    cursor:pointer;
+
 }

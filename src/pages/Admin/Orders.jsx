@@ -11,6 +11,14 @@ import Topbar from "../../components/Admin/Topbar";
 function Orders() {
 
     const [orders, setOrders] = useState([]);
+    const [search, setSearch] = useState("");
+    const [status, setStatus] = useState("All");
+    const [payment, setPayment] = useState("All");
+    const [dateFilter, setDateFilter] = useState("All");
+
+    const [fromDate, setFromDate] = useState("");
+
+    const [toDate, setToDate] = useState("");
 
     const navigate = useNavigate();
 
@@ -18,7 +26,31 @@ function Orders() {
 
         try {
 
-            const response = await adminApi.get("/admin/orders");
+            const response = await adminApi.get(
+
+                "/admin/orders",
+
+                {
+
+                    params: {
+
+                        search,
+
+                        status,
+
+                        payment,
+
+                        dateFilter,
+
+                        fromDate,
+
+                        toDate
+
+                    }
+
+                }
+
+            );
 
             setOrders(response.data);
 
@@ -30,13 +62,29 @@ function Orders() {
 
         }
 
-    }, []);
+    }, [
+
+    search,
+
+    status,
+
+    payment,
+
+    dateFilter,
+
+    fromDate,
+
+    toDate
+
+]);
 
     useEffect(() => {
 
         loadOrders();
 
     }, [loadOrders]);
+
+
 
     return (
 
@@ -51,6 +99,87 @@ function Orders() {
                 <div className="orders-page">
 
                     <h1>Orders</h1>
+
+                    <div className="order-filters">
+
+                        <input
+                            type="text"
+                            placeholder="Search Customer..."
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                        />
+
+                        <select
+                            value={status}
+                            onChange={(e) => setStatus(e.target.value)}
+                        >
+                            <option>All</option>
+                            <option>Placed</option>
+                            <option>Shipped</option>
+                            <option>Delivered</option>
+                            <option>Cancelled</option>
+                        </select>
+
+                        <select
+                            value={payment}
+                            onChange={(e) => setPayment(e.target.value)}
+                        >
+                            <option>All</option>
+                            <option>Paid</option>
+                            <option>Pending</option>
+                            <option>Failed</option>
+                        </select>
+
+                        <select
+                            value={dateFilter}
+                            onChange={(e) => setDateFilter(e.target.value)}
+                        >
+                            <option value="All">All Dates</option>
+                            <option value="Today">Today</option>
+                            <option value="Yesterday">Yesterday</option>
+                            <option value="Last7Days">Last 7 Days</option>
+                            <option value="ThisMonth">This Month</option>
+                            <option value="Custom">Custom Range</option>
+                        </select>
+
+                        {
+                            dateFilter === "Custom" && (
+
+                                <>
+
+                                    <input
+                                        type="date"
+                                        value={fromDate}
+                                        onChange={(e) => setFromDate(e.target.value)}
+                                    />
+
+                                    <input
+                                        type="date"
+                                        value={toDate}
+                                        onChange={(e) => setToDate(e.target.value)}
+                                    />
+
+                                </>
+
+                            )
+                        }
+
+                        <button
+                            onClick={() => {
+
+                                setSearch("");
+                                setStatus("All");
+                                setPayment("All");
+                                setDateFilter("All");
+                                setFromDate("");
+                                setToDate("");
+
+                            }}
+                        >
+                            Reset
+                        </button>
+
+                    </div>
 
                     <table>
 

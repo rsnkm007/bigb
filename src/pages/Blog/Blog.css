@@ -22,7 +22,7 @@
 
     font-size:42px;
 
-    color:#ff0004;
+    color:#34c759;
 
     margin-bottom:15px;
 
@@ -80,7 +80,7 @@
 
     display:inline-block;
 
-    background:#ff0004;
+    background:#34c759;
 
     color:white;
 
@@ -128,7 +128,7 @@
 
     border:none;
 
-    background:#ff0004;
+    background:#34c759;
 
     color:white;
 
@@ -148,7 +148,7 @@
 
 .read-more-btn:hover{
 
-    background:#d90003;
+    background:#34c759;
 
     transform:scale(1.05);
 

@@ -2,14 +2,14 @@ import db from "../config/db.js";
 
 export const adminLogin = (req, res) => {
 
-  const {
+    const {
 
-    username,
-    password
+        username,
+        password
 
-  } = req.body;
+    } = req.body;
 
-  const sql = `
+    const sql = `
 
         SELECT *
 
@@ -21,83 +21,83 @@ export const adminLogin = (req, res) => {
 
     `;
 
-  db.query(
+    db.query(
 
-    sql,
+        sql,
 
-    [
+        [
 
-      username,
-      password
+            username,
+            password
 
-    ],
+        ],
 
-    (err, results) => {
+        (err, results) => {
 
-      if (err) {
+            if (err) {
 
-        console.error(err);
+                console.error(err);
 
-        return res.status(500).json({
+                return res.status(500).json({
 
-          success: false,
+                    success: false,
 
-          message: "Database Error"
+                    message: "Database Error"
 
-        });
+                });
 
-      }
+            }
 
-      if (results.length === 0) {
+            if (results.length === 0) {
 
-        return res.status(401).json({
+                return res.status(401).json({
 
-          success: false,
+                    success: false,
 
-          message: "Invalid Username or Password"
+                    message: "Invalid Username or Password"
 
-        });
+                });
 
-      }
+            }
 
-      const admin = {
+            const admin = {
 
-        id: results[0].id,
+                id: results[0].id,
 
-        username: results[0].username
+                username: results[0].username
 
-      };
+            };
 
-      res.json({
+            res.json({
 
-        success: true,
+                success: true,
 
-        admin
+                admin
 
-      });
+            });
 
-    }
+        }
 
-  );
+    );
 
 };
 
 export const addProduct = (req, res) => {
 
-  const {
+    const {
 
-    featured,
-    category,
-    company,
-    name,
-    description,
-    regular_price,
-    offer_price,
-    image
+        featured,
+        category,
+        company,
+        name,
+        description,
+        regular_price,
+        offer_price,
+        image
 
-  } = req.body;
+    } = req.body;
 
-  const sql = `
+    const sql = `
 
         INSERT INTO products
         (
@@ -118,73 +118,73 @@ export const addProduct = (req, res) => {
 
     `;
 
-  db.query(
+    db.query(
 
-    sql,
+        sql,
 
-    [
+        [
 
-      featured,
-      category,
-      company,
-      name,
-      description,
-      regular_price,
-      offer_price,
-      image
+            featured,
+            category,
+            company,
+            name,
+            description,
+            regular_price,
+            offer_price,
+            image
 
-    ],
+        ],
 
-    (err, result) => {
+        (err, result) => {
 
-      if (err) {
+            if (err) {
 
-        console.error(err);
+                console.error(err);
 
-        return res.status(500).json({
+                return res.status(500).json({
 
-          success: false,
+                    success: false,
 
-          message: "Database Error"
+                    message: "Database Error"
 
-        });
+                });
 
-      }
+            }
 
-      res.json({
+            res.json({
 
-        success: true,
+                success: true,
 
-        message: "Product Added Successfully",
+                message: "Product Added Successfully",
 
-        productId: result.insertId
+                productId: result.insertId
 
-      });
+            });
 
-    }
+        }
 
-  );
+    );
 
 };
 
 export const updateProduct = (req, res) => {
 
-  const { id } = req.params;
+    const { id } = req.params;
 
-  const {
+    const {
 
-    featured,
-    category,
-    company,
-    name,
-    description,
-    regular_price,
-    offer_price,
-    image
+        featured,
+        category,
+        company,
+        name,
+        description,
+        regular_price,
+        offer_price,
+        image
 
-  } = req.body;
+    } = req.body;
 
-  const sql = `
+    const sql = `
 
         UPDATE products
 
@@ -210,63 +210,63 @@ export const updateProduct = (req, res) => {
 
     `;
 
-  db.query(
+    db.query(
 
-    sql,
+        sql,
 
-    [
+        [
 
-      featured,
-      category,
-      company,
-      name,
-      description,
-      regular_price,
-      offer_price,
-      image,
-      id
+            featured,
+            category,
+            company,
+            name,
+            description,
+            regular_price,
+            offer_price,
+            image,
+            id
 
-    ],
+        ],
 
-    (err, result) => {
+        (err, result) => {
 
-      if (err) {
+            if (err) {
 
-        console.error(err);
+                console.error(err);
 
-        return res.status(500).json({
+                return res.status(500).json({
 
-          success: false,
+                    success: false,
 
-          message: "Database Error"
+                    message: "Database Error"
 
-        });
+                });
 
-      }
+            }
 
-      if (result.affectedRows === 0) {
+            if (result.affectedRows === 0) {
 
-        return res.status(404).json({
+                return res.status(404).json({
 
-          success: false,
+                    success: false,
 
-          message: "Product Not Found"
+                    message: "Product Not Found"
 
-        });
+                });
 
-      }
+            }
 
-      res.json({
+            res.json({
 
-        success: true,
+                success: true,
 
-        message: "Product Updated Successfully"
+                message: "Product Updated Successfully"
 
-      });
+            });
 
-    }
+        }
 
-  );
+    );
 
 };
 
@@ -332,7 +332,23 @@ export const deleteProduct = (req, res) => {
 
 export const getAllOrders = (req, res) => {
 
-    const sql = `
+    const {
+
+        search,
+
+        status,
+
+        payment,
+
+        dateFilter,
+
+        fromDate,
+
+        toDate
+
+    } = req.query;
+
+    let sql = `
 
         SELECT
 
@@ -350,15 +366,125 @@ export const getAllOrders = (req, res) => {
 
         FROM orders
 
-        JOIN users
+        LEFT JOIN users
 
             ON orders.firebase_uid = users.firebase_uid
+
+        WHERE 1 = 1
+
+    `;
+
+    const values = [];
+
+    if (search) {
+
+        sql += `
+
+            AND users.name LIKE ?
+
+        `;
+
+        values.push(`%${search}%`);
+
+    }
+
+    if (status && status !== "All") {
+
+        sql += `
+
+            AND orders.order_status = ?
+
+        `;
+
+        values.push(status);
+
+    }
+
+    if (payment && payment !== "All") {
+
+        sql += `
+
+            AND orders.payment_status = ?
+
+        `;
+
+        values.push(payment);
+
+    }
+    if (dateFilter === "Today") {
+
+        sql += `
+        AND DATE(orders.created_at) = CURDATE()
+    `;
+
+    }
+
+    else if (dateFilter === "Yesterday") {
+
+        sql += `
+        AND DATE(orders.created_at) = CURDATE() - INTERVAL 1 DAY
+    `;
+
+    }
+
+    else if (dateFilter === "Last7Days") {
+
+        sql += `
+        AND orders.created_at >= CURDATE() - INTERVAL 7 DAY
+    `;
+
+    }
+
+    else if (dateFilter === "ThisMonth") {
+
+        sql += `
+        AND MONTH(orders.created_at) = MONTH(CURDATE())
+        AND YEAR(orders.created_at) = YEAR(CURDATE())
+    `;
+
+    }
+
+    else if (dateFilter === "Custom") {
+
+        if (fromDate && toDate) {
+
+            sql += `
+            AND DATE(orders.created_at) BETWEEN ? AND ?
+        `;
+
+            values.push(fromDate, toDate);
+
+        }
+
+        else if (fromDate) {
+
+            sql += `
+            AND DATE(orders.created_at) >= ?
+        `;
+
+            values.push(fromDate);
+
+        }
+
+        else if (toDate) {
+
+            sql += `
+            AND DATE(orders.created_at) <= ?
+        `;
+
+            values.push(toDate);
+
+        }
+
+    }
+
+    sql += `
 
         ORDER BY orders.created_at DESC
 
     `;
 
-    db.query(sql, (err, result) => {
+    db.query(sql, values, (err, result) => {
 
         if (err) {
 

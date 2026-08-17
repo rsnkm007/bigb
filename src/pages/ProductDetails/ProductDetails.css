@@ -106,7 +106,7 @@ body{
 
 .offer-price{
 
-    color:red;
+    color:#34c759;
 
     font-size:35px;
 }
@@ -121,7 +121,7 @@ body{
 
 .discount{
 
-    background:red;
+    background:#34c759;
 
     color:white;
 
@@ -146,7 +146,7 @@ body{
 
 .buy-btn{
 
-    background:red;
+    background:#34c759;
 
     color:white;
 
@@ -165,7 +165,7 @@ body{
 
 .buy-btn:hover{
 
-    background:#c40000;
+    background:#34c759;
 }
 
 .cart-btn{
@@ -268,7 +268,7 @@ body{
 
     cursor:pointer;
 
-    background:#ff4d6d;
+    background:#34c759;
 
     color:white;
 
@@ -280,7 +280,7 @@ body{
 
 .wishlist-btn:hover{
 
-    background:#ff1f4b;
+    background:#34c759;
 
 }
 

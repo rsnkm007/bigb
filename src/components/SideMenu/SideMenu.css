@@ -65,7 +65,7 @@
 
     padding:25px;
 
-    background:linear-gradient(135deg,#ff0004,#ff5c5c);
+    background:linear-gradient(135deg,#ff0004,#34c759);
 
     color:white;
 
@@ -108,9 +108,9 @@
 
 .side-menu nav a:hover{
 
-    background:#ffe6e6;
+    background:rgb(52, 199, 89, 0.15);
 
-    color:#ff0004;
+    color:#34c759;
 
     transform:translateX(-6px);
 
@@ -122,7 +122,7 @@
 
     border:none;
 
-    background:#ff0004;
+    background:#34c759;
 
     color:white;
 

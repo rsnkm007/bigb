@@ -106,8 +106,42 @@ td button:first-child{
 
 td button:last-child{
 
-    background:#ef4444;
+    background:#34c759;
 
     color:white;
+
+}
+
+.product-filters{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin:20px 0;
+
+}
+
+.product-filters input{
+
+    padding:10px;
+
+    width:250px;
+
+}
+
+.product-filters select{
+
+    padding:10px;
+
+}
+
+.product-filters button{
+
+    padding:10px 20px;
+
+    cursor:pointer;
 
 }

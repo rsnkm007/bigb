@@ -20,7 +20,7 @@
 
     text-align:center;
 
-    color:#ff0004;
+    color:#34c759;
 
     font-size:42px;
 
@@ -78,7 +78,7 @@
 
 .job-card h2{
 
-    color:#ff0004;
+    color:#34c759;
 
     margin-bottom:20px;
 
@@ -106,7 +106,7 @@
 
     border-radius:10px;
 
-    background:#ff0004;
+    background:#34c759;
 
     color:white;
 
@@ -122,7 +122,7 @@
 
 .apply-btn:hover{
 
-    background:#d90003;
+    background:#34c759;
 
     transform:scale(1.03);
 

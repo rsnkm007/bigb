@@ -1,183 +1,165 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  height: 60px;
-  align-items: center;
-  padding: 20px;
-  background-color: rgba(255, 0, 4, 1);
-  backdrop-filter: blur(3px);
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    padding: 20px;
+    background-color: #34c759;
+    backdrop-filter: blur(3px);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10;
 }
 
 .search-box {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .header-left .search-input {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .header-left input {
-  height: 30px;
-  border-radius: 20px;
-  border: none;
-  box-shadow: inset 0 5px 10px -0.5px rgba(0, 0, 0, 0.3);
-  padding: 5px 15px 5px 35px;
-  font-weight: bold;
-  width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: inset 0 5px 10px -0.5px rgba(0, 0, 0, 0.3);
+    padding: 5px 15px 5px 35px;
+    font-weight: bold;
+    width: 150px;
 }
 
 .header-left button {
-  height: 35px;
-  border-radius: 20px;
-  border: none;
-  padding: 5px 15px;
-  font-weight: bold;
-  width: 80px;
-  transition: all 0.8s ease;
+    margin-top: 3px;
+    height: 38px;
+    border-radius: 20px;
+    border: none;
+    padding: 5px 15px;
+    font-weight: bold;
+    width: 80px;
+    transition: all 0.8s ease;
 }
 
 .header-left button:hover {
-  cursor: pointer;
-  box-shadow: inset 0 3px 10px -0.5px rgba(255, 0, 4, 0.3);
+    cursor: pointer;
+    box-shadow: inset 0 3px 10px -0.5px rgba(52, 199, 89, 1);
 }
 
 .header-left input:focus {
-  outline: none;
-  font-weight: bold;
+    outline: none;
+    font-weight: bold;
 }
 
 .header-left input::placeholder {
-  font-weight: 600;
-  text-align: right;
+    font-weight: 600;
+    text-align: right;
 }
 
 .header-left .search-icon {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
 .header-middle h1 {
-  color: rgba(255, 255, 255, 1);
-  align-items: center;
-  justify-content: center;
-  transition: all 0.8s ease;
+    color: rgba(255, 255, 255, 1);
+    align-items: center;
+    justify-content: center;
+    transition: all 0.8s ease;
 }
 
 .header-middle h1:hover {
-  cursor: pointer;
-  font-size: 35px;
+    cursor: pointer;
+    font-size: 35px;
 }
 
-.header-logo-link{
-
-    text-decoration:none;
-
-    color:inherit;
-
+.header-logo-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .header-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
 }
 
 .header-right .header-right-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
-  color: rgba(255, 255, 255, 1);
-  font-size: 12px;
-  font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .header-right .icons {
-  width: 25px;
-  height: 40px;
-  color: rgba(255, 255, 255, 1);
+    width: 25px;
+    height: 40px;
+    color: rgba(255, 255, 255, 1);
 }
 
 .header-right .icons:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-.header-right-item{
-    
+.header-right-item {
     text-decoration: none;
 }
 
-
-.wishlist-link{
-    text-decoration:none;
-    color:white;
+.wishlist-link {
+    text-decoration: none;
+    color: white;
 }
 
-.wishlist-icon-container{
-    position:relative;
+.wishlist-icon-container {
+    position: relative;
 }
 
-.wishlist-count{
-
-    position:absolute;
-
-    top:4px;
-    right:-8px;
-
-    background:white;
-
-    color:red;
-
-    width:18px;
-    height:18px;
-
-    border-radius:50%;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    font-size:10px;
-    font-weight:bold;
-
+.wishlist-count {
+    position: absolute;
+    top: 4px;
+    right: -8px;
+    background: white;
+    color: red;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
 }
 
 /* ==========================================
             LARGE TABLETS (1200px)
 ========================================== */
 
-@media (max-width:1200px){
+@media (max-width:1200px) {
 
-    .header{
-
-        padding:15px 20px;
-
+    .header {
+        padding: 15px 20px;
     }
 
-    .header-middle h1{
-
-        font-size:30px;
-
+    .header-middle h1 {
+        font-size: 30px;
     }
 
-    .header-right{
-
-        gap:18px;
-
+    .header-right {
+        gap: 18px;
     }
 
 }
@@ -187,163 +169,87 @@
             TABLETS (992px)
 ========================================== */
 
-@media (max-width:992px){
+@media (max-width:992px) {
 
-    .header{
-
-        padding:15px;
-
+    .header {
+        padding: 15px;
     }
 
-    .header-left input{
-
-        width:120px;
-
+    .header-left input {
+        width: 120px;
     }
 
-    .header-left button{
-
-        width:70px;
-
+    .header-left button {
+        width: 70px;
     }
 
-    .header-middle h1{
-
-        font-size:28px;
-
+    .header-middle h1 {
+        font-size: 28px;
     }
 
-    .header-right{
-
-        gap:15px;
-
+    .header-right {
+        gap: 15px;
     }
 
-    .header-right .icons{
-
-        width:22px;
-        height:32px;
-
+    .header-right .icons {
+        width: 22px;
+        height: 32px;
     }
 
 }
 
 
 /* ==========================================
-            MOBILE (768px)
+   MOBILE — SHOW ONLY MENU (max-width: 576px)
+   Keeps search bar and title visible.
+   Hides Account, Cart, Wishlist, Notifications.
 ========================================== */
 
-@media (max-width:768px){
+@media (max-width: 576px) {
 
-    .header{
-
-        padding:12px;
-
+    .header {
+        height: 55px;
+        padding: 10px;
     }
 
-    .header-left input{
-
-        width:100px;
-
-        font-size:12px;
-
+    /* Shrink search bar to fit alongside title + menu icon */
+    .header-left input {
+        width: 90px;
+        height: 28px;
+        font-size: 12px;
+        padding: 5px 10px 5px 28px;
     }
 
-    .header-left button{
-
-        width:60px;
-
-        font-size:12px;
-
+    .header-left button {
+        width: 50px;
+        height: 28px;
+        font-size: 11px;
+        padding: 5px 8px;
     }
 
-    .header-middle h1{
-
-        font-size:24px;
-
+    .header-left .search-icon {
+        left: 8px;
     }
 
-    .header-right{
-
-        gap:12px;
-
+    /* Shrink title so it doesn't crowd the row */
+    .header-middle h1 {
+        font-size: 20px;
     }
 
-    .header-right .header-right-item span{
-
-        display:none;
-
+    /* Hide Account, Cart, Wishlist, Notifications (all rendered as <a> tags) */
+    .header-right a.header-right-item {
+        display: none;
     }
 
-    .header-right .icons{
-
-        width:20px;
-
-        height:28px;
-
+    /* Keep only the Menu item (a <div>, not a Link) visible */
+    .header-right {
+        gap: 0;
+        justify-content: flex-end;
     }
 
-}
-
-
-/* ==========================================
-            SMALL MOBILE (576px)
-========================================== */
-
-@media (max-width:576px){
-
-    .header{
-
-        height:55px;
-
-        padding:10px;
-
-    }
-
-    .header-left input{
-
-        display:none;
-
-    }
-
-    .header-left button{
-
-        display:none;
-
-    }
-
-    .header-middle h1{
-
-        font-size:22px;
-
-    }
-
-    .header-right{
-
-        gap:10px;
-
-    }
-
-    .header-right .icons{
-
-        width:18px;
-
-        height:24px;
-
-    }
-
-    .wishlist-count{
-
-        width:15px;
-
-        height:15px;
-
-        font-size:8px;
-
-        top:2px;
-
-        right:-5px;
-
+    .header-right .icons {
+        width: 24px;
+        height: 30px;
     }
 
 }
@@ -353,24 +259,24 @@
             EXTRA SMALL MOBILE (400px)
 ========================================== */
 
-@media (max-width:400px){
+@media (max-width:400px) {
 
-    .header{
-
-        padding:8px;
-
+    .header {
+        padding: 8px;
     }
 
-    .header-middle h1{
-
-        font-size:20px;
-
+    .header-left input {
+        width: 75px;
+        font-size: 11px;
     }
 
-    .header-right{
+    .header-left button {
+        width: 45px;
+        font-size: 10px;
+    }
 
-        gap:8px;
-
+    .header-middle h1 {
+        font-size: 18px;
     }
 
 }

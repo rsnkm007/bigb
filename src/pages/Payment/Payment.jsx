@@ -83,7 +83,7 @@ function Payment() {
 
         theme: {
 
-          color: "#ff3b30"
+          color: "#34c759"
 
         },
 
