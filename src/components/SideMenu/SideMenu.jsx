@@ -74,6 +74,14 @@ function SideMenu({
 
                 <nav>
 
+                    <Link to="/account" onClick={onClose}>
+
+                        <FaHome />
+
+                        Account
+
+                    </Link>
+
                     <Link to="/home" onClick={onClose}>
 
                         <FaHome />
