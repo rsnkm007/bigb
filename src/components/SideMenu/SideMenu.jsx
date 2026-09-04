@@ -6,6 +6,8 @@ import {
 
     FaTimes,
 
+    FaUser,
+
     FaHome,
 
     FaBoxOpen,
@@ -76,7 +78,7 @@ function SideMenu({
 
                     <Link to="/account" onClick={onClose}>
 
-                        <FaHome />
+                        <FaUser />
 
                         Account
 
