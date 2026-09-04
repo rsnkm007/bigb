@@ -1,10 +1,15 @@
 import "./RefundPolicy.css";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function RefundPolicy() {
 
     return (
 
-        <div className="refund-page">
+        <>
+            <Header />
+
+            <main className="refund-page">
 
             <div className="refund-container">
 
@@ -118,7 +123,10 @@ function RefundPolicy() {
 
             </div>
 
-        </div>
+            </main>
+
+            <Footer />
+        </>
 
     );
 

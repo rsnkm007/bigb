@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
 import { NotificationContext } from "../../context/NotificationContext";
+import "./Notifications.css";
 
 function Notifications() {
 
@@ -21,7 +22,7 @@ function Notifications() {
 
             <Header />
 
-            <div style={{ marginTop: "150px", padding: "20px" }}>
+            <main className="notifications-page">
 
                 <h1>Notifications</h1>
 
@@ -35,23 +36,15 @@ function Notifications() {
 
                         notifications.map(notification => (
 
-                            <div
+                            <button
 
                                 key={notification.id}
 
                                 onClick={() => markAsRead(notification.id)}
 
-                                style={{
+                                className={`notification-card${notification.read ? "" : " is-unread"}`}
 
-                                    border: "1px solid lightgray",
-
-                                    marginBottom: "10px",
-
-                                    padding: "15px",
-
-                                    cursor: "pointer"
-
-                                }}
+                                type="button"
 
                             >
 
@@ -59,13 +52,13 @@ function Notifications() {
 
                                 <small>{notification.time}</small>
 
-                            </div>
+                            </button>
 
                         ))
 
                 }
 
-            </div>
+            </main>
 
             <Footer />
 

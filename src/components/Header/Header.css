@@ -1,282 +1,237 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    height: 60px;
-    align-items: center;
-    padding: 20px;
-    background-color: #34c759;
-    backdrop-filter: blur(3px);
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    z-index: 10;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  min-height: 78px;
+  padding: 10px 34px;
+  background: #121b2e;
+  box-shadow: 0 2px 12px rgba(10, 17, 32, 0.2);
 }
 
-.search-box {
-    position: relative;
-    display: inline-block;
-}
-
-.header-left .search-input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-.header-left input {
-    height: 30px;
-    border-radius: 20px;
-    border: none;
-    box-shadow: inset 0 5px 10px -0.5px rgba(0, 0, 0, 0.3);
-    padding: 5px 15px 5px 35px;
-    font-weight: bold;
-    width: 150px;
-}
-
-.header-left button {
-    margin-top: 3px;
-    height: 38px;
-    border-radius: 20px;
-    border: none;
-    padding: 5px 15px;
-    font-weight: bold;
-    width: 80px;
-    transition: all 0.8s ease;
-}
-
-.header-left button:hover {
-    cursor: pointer;
-    box-shadow: inset 0 3px 10px -0.5px rgba(52, 199, 89, 1);
-}
-
-.header-left input:focus {
-    outline: none;
-    font-weight: bold;
-}
-
-.header-left input::placeholder {
-    font-weight: 600;
-    text-align: right;
-}
-
-.header-left .search-icon {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
-
-.header-middle h1 {
-    color: rgba(255, 255, 255, 1);
-    align-items: center;
-    justify-content: center;
-    transition: all 0.8s ease;
-}
-
-.header-middle h1:hover {
-    cursor: pointer;
-    font-size: 35px;
+.header-middle {
+  order: -1;
+  flex: 0 0 auto;
 }
 
 .header-logo-link {
-    text-decoration: none;
-    color: inherit;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.brand-name {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.brand-name span {
+  display: inline-grid;
+  width: 24px;
+  height: 27px;
+  place-items: center;
+  margin-left: 1px;
+  border: 2px solid #dba631;
+  border-radius: 5px;
+  color: #e1ab36;
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.header-left {
+  max-width: 670px;
+  flex: 1;
+}
+
+.search-box,
+.header-left .search-input {
+  display: flex;
+  width: 100%;
+}
+
+.search-box {
+  position: relative;
+}
+
+.header-left .search-input {
+  align-items: stretch;
+}
+
+.header-left input {
+  width: 100%;
+  min-width: 0;
+  height: 48px;
+  border: 1px solid #334058;
+  border-right: 0;
+  border-radius: 12px 0 0 12px;
+  outline: 0;
+  background: #1a2539;
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.86rem;
+  padding: 0 16px 0 44px;
+}
+
+.header-left input::placeholder {
+  color: #afb7c5;
+}
+
+.header-left input:focus {
+  border-color: #dba631;
+}
+
+.header-left .search-icon {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 16px;
+  color: #aeb7c5;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.header-left button {
+  display: grid;
+  width: 58px;
+  height: 48px;
+  place-items: center;
+  flex: 0 0 58px;
+  border: 0;
+  border-radius: 0 12px 12px 0;
+  background: #dba631;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 180ms ease;
+}
+
+.header-left button:hover {
+  background: #efbd4e;
 }
 
 .header-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(13px, 1.8vw, 26px);
+  margin-left: auto;
 }
 
 .header-right .header-right-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
-    color: rgba(255, 255, 255, 1);
-    font-size: 12px;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2px;
+  color: #f6f7fa;
+  cursor: pointer;
+  font-size: 0.69rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.header-right .header-right-item:hover {
+  color: #e8b743;
 }
 
 .header-right .icons {
-    width: 25px;
-    height: 40px;
-    color: rgba(255, 255, 255, 1);
-}
-
-.header-right .icons:hover {
-    cursor: pointer;
-}
-
-.header-right-item {
-    text-decoration: none;
-}
-
-.wishlist-link {
-    text-decoration: none;
-    color: white;
+  width: 25px;
+  height: 25px;
 }
 
 .wishlist-icon-container {
-    position: relative;
+  position: relative;
 }
 
 .wishlist-count {
-    position: absolute;
-    top: 4px;
-    right: -8px;
-    background: white;
-    color: red;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-    font-weight: bold;
+  position: absolute;
+  top: -8px;
+  right: -11px;
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  border-radius: 50%;
+  background: #dba631;
+  color: #17233b;
+  font-size: 0.64rem;
+  font-weight: 800;
 }
 
-/* ==========================================
-            LARGE TABLETS (1200px)
-========================================== */
+@media (max-width: 1050px) {
+  .header {
+    gap: 20px;
+    padding-inline: 22px;
+  }
 
-@media (max-width:1200px) {
+  .header-right {
+    gap: 14px;
+  }
 
-    .header {
-        padding: 15px 20px;
-    }
-
-    .header-middle h1 {
-        font-size: 30px;
-    }
-
-    .header-right {
-        gap: 18px;
-    }
-
+  .header-right .icons {
+    width: 22px;
+    height: 22px;
+  }
 }
 
+@media (max-width: 760px) {
+  .header {
+    gap: 14px;
+    min-height: 68px;
+    padding: 9px 14px;
+  }
 
-/* ==========================================
-            TABLETS (992px)
-========================================== */
+  .brand-name {
+    font-size: 1.45rem;
+  }
 
-@media (max-width:992px) {
+  .brand-name span {
+    width: 19px;
+    height: 22px;
+    font-size: 1.1rem;
+  }
 
-    .header {
-        padding: 15px;
-    }
+  .header-left input,
+  .header-left button {
+    height: 42px;
+  }
 
-    .header-left input {
-        width: 120px;
-    }
+  .header-right a.header-right-item {
+    display: none;
+  }
 
-    .header-left button {
-        width: 70px;
-    }
+  .header-right .header-right-item {
+    font-size: 0;
+  }
 
-    .header-middle h1 {
-        font-size: 28px;
-    }
-
-    .header-right {
-        gap: 15px;
-    }
-
-    .header-right .icons {
-        width: 22px;
-        height: 32px;
-    }
-
+  .header-right .icons {
+    width: 25px;
+    height: 25px;
+  }
 }
 
+@media (max-width: 430px) {
+  .header {
+    gap: 9px;
+    padding-inline: 10px;
+  }
 
-/* ==========================================
-   MOBILE — SHOW ONLY MENU (max-width: 576px)
-   Keeps search bar and title visible.
-   Hides Account, Cart, Wishlist, Notifications.
-========================================== */
+  .header-left input {
+    padding-left: 36px;
+    font-size: 0.74rem;
+  }
 
-@media (max-width: 576px) {
+  .header-left .search-icon {
+    left: 12px;
+  }
 
-    .header {
-        height: 55px;
-        padding: 10px;
-    }
-
-    /* Shrink search bar to fit alongside title + menu icon */
-    .header-left input {
-        width: 90px;
-        height: 28px;
-        font-size: 12px;
-        padding: 5px 10px 5px 28px;
-    }
-
-    .header-left button {
-        width: 50px;
-        height: 28px;
-        font-size: 11px;
-        padding: 5px 8px;
-    }
-
-    .header-left .search-icon {
-        left: 8px;
-    }
-
-    /* Shrink title so it doesn't crowd the row */
-    .header-middle h1 {
-        font-size: 20px;
-    }
-
-    /* Hide Account, Cart, Wishlist, Notifications (all rendered as <a> tags) */
-    .header-right a.header-right-item {
-        display: none;
-    }
-
-    /* Keep only the Menu item (a <div>, not a Link) visible */
-    .header-right {
-        gap: 0;
-        justify-content: flex-end;
-    }
-
-    .header-right .icons {
-        width: 24px;
-        height: 30px;
-    }
-
-}
-
-
-/* ==========================================
-            EXTRA SMALL MOBILE (400px)
-========================================== */
-
-@media (max-width:400px) {
-
-    .header {
-        padding: 8px;
-    }
-
-    .header-left input {
-        width: 75px;
-        font-size: 11px;
-    }
-
-    .header-left button {
-        width: 45px;
-        font-size: 10px;
-    }
-
-    .header-middle h1 {
-        font-size: 18px;
-    }
-
+  .header-left button {
+    width: 46px;
+    flex-basis: 46px;
+  }
 }

@@ -7,46 +7,58 @@ import washing1 from "../../assets/Electronics/Washing Machines/washing1.jpeg";
 import shoe2 from "../../assets/Shoes/shoe2.jpeg";
 import micro1 from "../../assets/Electronics/Microwave/micro1.jpeg";
 import watch2 from "../../assets/Electronics/Wearables/watch2.jpeg";
+import { FaThLarge } from "react-icons/fa";
 
 function PopularCategory() {
 
   const categoriesDetails = [
     {
-      id: crypto.randomUUID(),
+      id: "mobiles",
       image: phone2,
-      category: "Mobiles"
+      category: "Mobiles",
+      itemCount: "1200+ Items"
     },
     {
-      id: crypto.randomUUID(),
+      id: "laptops",
       image: laptop1,
-      category: "Laptops"
+      category: "Laptops",
+      itemCount: "850+ Items"
     },
     {
-      id: crypto.randomUUID(),
+      id: "fashion",
       image: shirt2,
-      category: "Casuals"
+      category: "Fashion",
+      routeCategory: "Casuals",
+      itemCount: "2500+ Items"
     },
     {
-      id: crypto.randomUUID(),
+      id: "appliances",
       image: washing1,
-      category: "Washing Machine"
+      category: "Appliances",
+      routeCategory: "Washing Machine",
+      itemCount: "1500+ Items"
     },
     {
-      id: crypto.randomUUID(),
+      id: "footwear",
       image: shoe2,
-      category: "Shoes"
+      category: "Footwear",
+      routeCategory: "Shoes",
+      itemCount: "1800+ Items"
     },
 
     {
-      id: crypto.randomUUID(),
+      id: "wearables",
       image: watch2,
-      category: "Wearables"
+      category: "Wearables",
+      itemCount: "900+ Items"
     },
 
     {
-      id: crypto.randomUUID(),
+      id: "more-categories",
       image: micro1,
-      category: "More categories"
+      category: "More",
+      itemCount: "See all",
+      isMore: true
     }
   ];
 
@@ -59,18 +71,25 @@ function PopularCategory() {
           <Link
             key={item.id}
             to={
-              item.category === "More categories"
+              item.isMore
                 ? "/more-categories"
-                : `/category/${item.category}`
+                : `/category/${item.routeCategory || item.category}`
             }
             className="category-link"
           >
 
             <div className="categories">
-              <img src={item.image} alt={item.category} />
+              {item.isMore ? (
+                <div className="more-category-icon" aria-hidden="true">
+                  <FaThLarge />
+                </div>
+              ) : (
+                <img src={item.image} alt="" />
+              )}
               <div className="category-name">
                 {item.category}
               </div>
+              <span className="category-count">{item.itemCount}</span>
             </div>
 
           </Link>

@@ -1,10 +1,15 @@
 import "./Terms.css";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function Terms() {
 
     return (
 
-        <div className="terms-page">
+        <>
+            <Header />
+
+            <main className="terms-page">
 
             <div className="terms-container">
 
@@ -132,7 +137,10 @@ function Terms() {
 
             </div>
 
-        </div>
+            </main>
+
+            <Footer />
+        </>
 
     );
 

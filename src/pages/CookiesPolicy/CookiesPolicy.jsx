@@ -1,10 +1,15 @@
 import "./CookiesPolicy.css";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function CookiesPolicy() {
 
     return (
 
-        <div className="cookies-page">
+        <>
+            <Header />
+
+            <main className="cookies-page">
 
             <div className="cookies-container">
 
@@ -122,7 +127,10 @@ function CookiesPolicy() {
 
             </div>
 
-        </div>
+            </main>
+
+            <Footer />
+        </>
 
     );
 

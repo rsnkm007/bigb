@@ -1,8 +1,9 @@
 import "./ProductCard.css";
 import { Link, useNavigate } from "react-router-dom";
-import "./ProductCard.css";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import { WishlistContext } from "../../context/WishlistContext";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 function ProductCard(props) {
 
@@ -12,6 +13,7 @@ function ProductCard(props) {
     image,
     company,
     name,
+    description,
     regular_price,
     offer_price
   } = props;
@@ -19,6 +21,8 @@ function ProductCard(props) {
   const navigate = useNavigate();
 
   const { addToCart } = useContext(CartContext);
+  const { addToWishlist, removeFromWishlist, isInWishlist } =
+    useContext(WishlistContext);
 
   const product = {
 
@@ -32,6 +36,8 @@ function ProductCard(props) {
 
     name,
 
+    description,
+
     regular_price,
 
     offer_price
@@ -39,68 +45,81 @@ function ProductCard(props) {
   };
 
 
-  const handleOrderNow = (e) => {
+  const handleOrderNow = async () => {
 
-    e.preventDefault();
-
-    addToCart(product);
+    await addToCart(product);
 
     navigate("/cart");
 
   };
+
+  const handleWishlist = async () => {
+
+    if (isInWishlist(category, id)) {
+
+      await removeFromWishlist(category, id);
+
+      return;
+
+    }
+
+    await addToWishlist(product);
+
+  };
+
+  const savedToWishlist = isInWishlist(category, id);
+
   return (
-    <Link
-      to={`/product/${category}/${id}`}
-      className="product-link"
-    >
-      <div className="product-card">
+    <article className="product-card">
+      <Link
+        to={`/product/${category}/${id}`}
+        className="product-link product-card-details"
+        aria-label={`View ${name}`}
+      >
         <img
           src={image}
           alt={name}
-          className="special-offers"
+          className="product-image"
           onError={(e) => {
             console.log("Image failed:", image);
-            e.target.style.border = "2px solid red";
+            e.currentTarget.classList.add("product-image--unavailable");
           }}
         />
 
-        <div className="company-name">
-          {company}
+        <div className="product-copy">
+          <p className="company-name">{company}</p>
+
+          <h3 className="product-name">{name}</h3>
+
+          {description && <p className="product-description">{description}</p>}
+
+          <div className="product-pricing">
+            <span className="regular-price">₹{regular_price}</span>
+            <span className="offer-price">₹{offer_price}</span>
+          </div>
         </div>
+      </Link>
 
-        <div className="product-name">
-          {name}
-        </div>
+      <div className="product-actions">
+        <button
+          className="order-now"
+          type="button"
+          onClick={handleOrderNow}
+        >
+          Add to Cart
+        </button>
 
-        <p className="regular-price">
-          Regular Price :
-          <span
-            style={{
-              textDecoration: "line-through",
-              marginLeft: "5px"
-            }}
-          >
-            ₹{regular_price}
-          </span>
-        </p>
-
-        <div className="offer-price-order">
-
-          <p>
-            Offer Price : ₹{offer_price}
-          </p>
-
-          <button
-            className="order-now"
-            onClick={handleOrderNow}
-          >
-            Order Now
-          </button>
-
-        </div>
-
+        <button
+          className={`wishlist-button${savedToWishlist ? " is-saved" : ""}`}
+          type="button"
+          onClick={handleWishlist}
+          aria-label={savedToWishlist ? "Remove from wishlist" : "Add to wishlist"}
+          aria-pressed={savedToWishlist}
+        >
+          {savedToWishlist ? <FaHeart /> : <FaRegHeart />}
+        </button>
       </div>
-    </Link>
+    </article>
   );
 }
 

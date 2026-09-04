@@ -1,4 +1,6 @@
 import "./Blog.css";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function Blog() {
 
@@ -44,7 +46,10 @@ function Blog() {
 
     return (
 
-        <div className="blog-page">
+        <>
+            <Header />
+
+            <main className="blog-page">
 
             <div className="blog-container">
 
@@ -104,7 +109,10 @@ function Blog() {
 
             </div>
 
-        </div>
+            </main>
+
+            <Footer />
+        </>
 
     );
 

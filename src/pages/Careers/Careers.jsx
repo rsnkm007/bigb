@@ -1,4 +1,6 @@
 import "./Careers.css";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function Careers() {
 
@@ -36,7 +38,10 @@ function Careers() {
 
     return (
 
-        <div className="careers-page">
+        <>
+            <Header />
+
+            <main className="careers-page">
 
             <div className="careers-container">
 
@@ -91,7 +96,10 @@ function Careers() {
 
             </div>
 
-        </div>
+            </main>
+
+            <Footer />
+        </>
 
     );
 

@@ -26,25 +26,31 @@ export const getProducts = (req, res) => {
 
     const values = [];
 
-    if (search) {
+    const searchText = typeof search === "string"
+        ? search.trim().slice(0, 100)
+        : "";
+
+    const searchTerms = searchText
+        .split(/\s+/)
+        .filter(Boolean)
+        .slice(0, 5);
+
+    searchTerms.forEach((term) => {
+
+        const pattern = `%${term}%`;
 
         sql += `
             AND (
                 name LIKE ?
                 OR category LIKE ?
                 OR company LIKE ?
+                OR description LIKE ?
             )
         `;
 
-        values.push(
+        values.push(pattern, pattern, pattern, pattern);
 
-            `%${search}%`,
-            `%${search}%`,
-            `%${search}%`
-
-        );
-
-    }
+    });
 
     if (category && category !== "All") {
 
@@ -76,9 +82,39 @@ export const getProducts = (req, res) => {
 
     }
 
-    sql += `
-        ORDER BY id DESC
-    `;
+    if (searchText) {
+
+        sql += `
+            ORDER BY
+                CASE
+                    WHEN name = ? THEN 0
+                    WHEN category = ? THEN 1
+                    WHEN company = ? THEN 2
+                    WHEN name LIKE ? THEN 3
+                    WHEN category LIKE ? THEN 4
+                    ELSE 5
+                END,
+                id DESC
+            LIMIT 100
+        `;
+
+        values.push(
+            searchText,
+            searchText,
+            searchText,
+            `${searchText}%`,
+            `${searchText}%`
+        );
+
+    }
+
+    else {
+
+        sql += `
+            ORDER BY id DESC
+        `;
+
+    }
 
     db.query(sql, values, (err, result) => {
 

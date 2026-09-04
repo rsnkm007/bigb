@@ -1,10 +1,15 @@
 import "./PrivacyPolicy.css";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function PrivacyPolicy() {
 
     return (
 
-        <div className="privacy-page">
+        <>
+            <Header />
+
+            <main className="privacy-page">
 
             <div className="privacy-container">
 
@@ -134,7 +139,10 @@ function PrivacyPolicy() {
 
             </div>
 
-        </div>
+            </main>
+
+            <Footer />
+        </>
 
     );
 

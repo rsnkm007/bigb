@@ -3,6 +3,7 @@ import Footer from "../../components/Footer/Footer";
 
 import AddressForm from "../../components/AddressForm/AddressForm";
 import AddressList from "../../components/AddressList/AddressList";
+import "./Address.css";
 
 function Address() {
 
@@ -12,12 +13,7 @@ function Address() {
 
             <Header />
 
-            <div
-                style={{
-                    marginTop: "150px",
-                    padding: "20px"
-                }}
-            >
+            <main className="address-page">
 
                 <h1>Saved Addresses</h1>
 
@@ -25,7 +21,7 @@ function Address() {
 
                 <AddressList />
 
-            </div>
+            </main>
 
             <Footer />
 

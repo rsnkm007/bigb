@@ -77,7 +77,7 @@ function Header() {
                 }}
               />
               <button onClick={handleSearch}>
-                Search
+                <FaSearch />
               </button>
             </div>
           </div>
@@ -89,7 +89,9 @@ function Header() {
             to="/"
             className="header-logo-link"
           >
-            <h1>Welcome to BigB</h1>
+            <h1 className="brand-name">
+              Big<span>B</span>
+            </h1>
           </Link>
 
         </div>

@@ -1,11 +1,10 @@
-import { useParams, Link } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 import productApi from "../../api/productApi";
 import "./Category.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import { WishlistContext } from "../../context/WishlistContext";
-import { CartContext } from "../../context/CartContext";
+import ProductCard from "../../components/ProductCard/ProductCard";
 
 function Category() {
 
@@ -35,20 +34,9 @@ useEffect(() => {
 
 }, []);
 
-const filteredProducts = products.filter(
-    product => product.category === categoryName
-);
-
-    const {
-        addToWishlist,
-        isInWishlist
-    } = useContext(WishlistContext);
-
-    const {
-        addToCart
-    } = useContext(CartContext);
-
-    console.log(filteredProducts);
+    const filteredProducts = products.filter(
+        product => product.category === categoryName
+    );
 
     return (
 
@@ -56,117 +44,35 @@ const filteredProducts = products.filter(
 
             <Header />
 
-            <div className="background-text">
-                BigB
-            </div>
+            <main className="category-content">
 
-            <h1>{categoryName}</h1>
+                <section className="category-heading-card">
+                    <p className="category-eyebrow">Shop by category</p>
+                    <h1>{categoryName}</h1>
+                    <p className="category-product-count">
+                        {filteredProducts.length} {filteredProducts.length === 1 ? "product" : "products"} available
+                    </p>
+                </section>
 
-            <div className="product-detail-container">
-
-                {filteredProducts.map(product => (
-
-                    <Link
-                        to={`/product/${product.category}/${product.id}`}
-                        className="product-link"
-                        key={product.id}
-                    >
-
-                        <div className="product-details">
-
-                            <img
-                                src={product.image}
-                                width={200}
-                                alt={product.name}
+                {filteredProducts.length > 0 ? (
+                    <div className="category-product-grid">
+                        {filteredProducts.map((product) => (
+                            <ProductCard
+                                key={`${product.category}-${product.id}`}
+                                {...product}
                             />
+                        ))}
+                    </div>
+                ) : (
+                    <section className="category-empty-state">
+                        <h2>No products found</h2>
+                        <p>New {categoryName} products will appear here soon.</p>
+                    </section>
+                )}
 
-                            <h3>{product.name}</h3>
+            </main>
 
-                            <div>{product.description}</div>
-
-                            <p>
-                                ₹{product.offer_price}
-
-                                <span>
-                                    {" "}
-                                    MRP:
-                                    <span
-                                        style={{
-                                            textDecoration: "line-through",
-                                            marginLeft: "5px"
-                                        }}
-                                    >
-                                        ₹{product.regular_price}
-                                    </span>
-
-                                    {" "}
-                                    {Math.round(
-                                        ((product.regular_price - product.offer_price) /
-                                            product.regular_price) * 100
-                                    )}% OFF
-                                </span>
-
-                            </p>
-                            <div className="category-buttons">
-
-                                <button
-                                    className="btn"
-                                    onClick={(e) => e.preventDefault()}
-                                >
-                                    Buy Now
-                                </button>
-
-                                <button
-                                    className="btn"
-                                    onClick={(e) => {
-
-                                        e.preventDefault();
-
-                                        addToCart(product);
-
-                                    }}
-                                >
-                                    Add to Cart
-                                </button>
-
-                                <button
-                                    className="btn"
-                                    onClick={(e) => {
-
-                                        e.preventDefault();
-
-                                        addToWishlist(product);
-
-                                    }}
-                                >
-
-                                    {
-
-                                        isInWishlist(product.category, product.id)
-
-                                            ?
-
-                                            "❤️ Wishlisted"
-
-                                            :
-
-                                            "🤍 Wishlist"
-
-                                    }
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </Link>
-
-                ))}
-
-            </div>
-
-            <Footer className="category-footer" />
+            <Footer />
 
         </div>
 

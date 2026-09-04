@@ -55,6 +55,7 @@ function ProductDetails() {
 
     const {
         addToWishlist,
+        removeFromWishlist,
         isInWishlist
     } = useContext(WishlistContext);
 
@@ -134,6 +135,22 @@ function ProductDetails() {
 
     };
 
+    const savedToWishlist = isInWishlist(product.category, product.id);
+
+    const handleWishlist = async () => {
+
+        if (savedToWishlist) {
+
+            await removeFromWishlist(product.category, product.id);
+
+            return;
+
+        }
+
+        await addToWishlist(product);
+
+    };
+
     return (
 
         <>
@@ -157,9 +174,9 @@ function ProductDetails() {
 
                 <div className="right-side">
 
-                    <h1>{product.company}</h1>
+                    <p className="product-brand">{product.company}</p>
 
-                    <h2>{product.name}</h2>
+                    <h1 className="product-title">{product.name}</h1>
 
                     <p className="description">
                         {product.description}
@@ -199,12 +216,12 @@ function ProductDetails() {
 
                         <button
                             className="wishlist-btn"
-                            onClick={() => addToWishlist(product)}
+                            onClick={handleWishlist}
                         >
 
                             {
 
-                                isInWishlist(product.category, product.id)
+                                savedToWishlist
 
                                     ?
 

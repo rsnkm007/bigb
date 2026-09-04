@@ -1,10 +1,15 @@
 import "./About.css";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function About() {
 
     return (
 
-        <div className="about-page">
+        <>
+            <Header />
+
+            <main className="about-page">
 
             <div className="about-container">
 
@@ -46,7 +51,10 @@ function About() {
 
             </div>
 
-        </div>
+            </main>
+
+            <Footer />
+        </>
 
     );
 

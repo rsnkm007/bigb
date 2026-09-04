@@ -1,4 +1,6 @@
 import "./Team.css";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function Team() {
 
@@ -40,7 +42,10 @@ function Team() {
 
     return (
 
-        <div className="team-page">
+        <>
+            <Header />
+
+            <main className="team-page">
 
             <div className="team-container">
 
@@ -86,7 +91,10 @@ function Team() {
 
             </div>
 
-        </div>
+            </main>
+
+            <Footer />
+        </>
 
     );
 
