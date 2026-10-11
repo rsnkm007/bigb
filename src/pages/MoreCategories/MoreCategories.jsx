@@ -23,7 +23,7 @@ import beauty from "../../assets/Beauty/beauty1.webp"
 import sports from "../../assets/Sports/Tennis/tennis1.jpeg"
 import bags from "../../assets/Travel/Bags/bag1.webp"
 import toys from "../../assets/Kids/Toys/toy1.webp"
-import grocery from "../../assets/Groceries/packed/gro1.webp"
+import grocery from "../../assets/Groceries/Packed/gro1.webp";
 
 function MoreCategories() {
 

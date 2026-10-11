@@ -11,8 +11,6 @@ const db = mysql.createConnection({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   connectTimeout: 15000,
-
-  // TiDB Cloud requires an encrypted connection.
   ssl: {
     minVersion: "TLSv1.2"
   }
